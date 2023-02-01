@@ -18,6 +18,9 @@
   "lint-staged": {
     "pages/**/*.{ts,tsx}": [
       "yarn lint"
+    ],
+    "components/**/*.{ts,tsx}": [
+      "yarn lint"
     ]
   },
   "dependencies": {
