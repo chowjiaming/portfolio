@@ -4,7 +4,7 @@ import Sidebar from '@/components/Sidebar';
 import {Flex, Heading} from '@chakra-ui/react';
 import {sidebarWidth, navbarHeight} from '@/utils/constants';
 
-export default function Home() {
+export default function Home(): JSX.Element {
   return (
     <>
       <Seo pageTitle="Portfolio" />
