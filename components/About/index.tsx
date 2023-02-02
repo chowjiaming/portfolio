@@ -3,6 +3,7 @@ import {Flex, Heading} from '@chakra-ui/react';
 export default function About(): JSX.Element {
   return (
     <Flex
+      id={'about'}
       as="section"
       justifyContent="center"
       alignItems="center"

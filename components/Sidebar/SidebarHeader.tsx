@@ -1,4 +1,4 @@
-import {Flex} from '@chakra-ui/react';
+import {Button, Flex, Heading} from '@chakra-ui/react';
 
 export default function SidebarHeader(): JSX.Element {
   return (
@@ -9,9 +9,12 @@ export default function SidebarHeader(): JSX.Element {
       width={'100%'}
       bg={'gray.300'}
       alignItems={'center'}
-      justifyContent={'center'}
+      justifyContent={'space-between'}
     >
-      Sidebar Header
+      <Heading as={'h1'} ml={4}>
+        Joseph Chow
+      </Heading>
+      <Button mr={4}>Dark Mode</Button>
     </Flex>
   );
 }

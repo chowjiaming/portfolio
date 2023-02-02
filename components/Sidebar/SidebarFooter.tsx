@@ -1,4 +1,5 @@
-import {Flex} from '@chakra-ui/react';
+import {Avatar, Flex, Heading, Text} from '@chakra-ui/react';
+import {footerContent} from '@/data/sidebar';
 
 export default function SidebarFooter(): JSX.Element {
   return (
@@ -11,7 +12,15 @@ export default function SidebarFooter(): JSX.Element {
       alignItems={'center'}
       justifyContent={'center'}
     >
-      SidebarFooter
+      <Flex alignItems={'center'}>
+        <Avatar name={footerContent.name} src={'/img/avatar.jpg'} size="lg" />
+        <Flex flexDir={'column'} ml={4}>
+          <Heading as={'h3'}>{footerContent.name}</Heading>
+          <Text as={'a'} href={footerContent.emailRef}>
+            {footerContent.email}
+          </Text>
+        </Flex>
+      </Flex>
     </Flex>
   );
 }

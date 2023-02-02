@@ -21,6 +21,9 @@
     ],
     "components/**/*.{ts,tsx}": [
       "yarn lint"
+    ],
+    "data/**/*.{ts,tsx}": [
+      "yarn lint"
     ]
   },
   "dependencies": {
@@ -37,6 +40,7 @@
     "next": "13.1.6",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "react-scrollspy-nav": "^1.3.0",
     "typescript": "4.9.5"
   },
   "devDependencies": {
