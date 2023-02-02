@@ -3,7 +3,7 @@ import Head from 'next/head';
 type SeoProps = {
   pageTitle?: string;
 };
-const Seo = ({pageTitle}: SeoProps) => {
+export default function Seo({pageTitle}: SeoProps): JSX.Element {
   return (
     <>
       <Head>
@@ -25,6 +25,4 @@ const Seo = ({pageTitle}: SeoProps) => {
       </Head>
     </>
   );
-};
-
-export default Seo;
+}
