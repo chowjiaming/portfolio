@@ -1,4 +1,5 @@
 import {Box} from '@chakra-ui/react';
+import {navbarHeight} from '@/utils/constants';
 
 export default function Navbar() {
   return (
@@ -8,8 +9,8 @@ export default function Navbar() {
       top={0}
       left={0}
       width={'100vw'}
-      height={16}
-      bg={'gray.100'}
+      height={navbarHeight}
+      bg={'gray.200'}
     >
       Navbar
     </Box>

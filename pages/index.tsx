@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar';
 import Seo from '@/components/Seo';
 import Sidebar from '@/components/Sidebar';
 import {Flex, Heading} from '@chakra-ui/react';
+import {sidebarWidth, navbarHeight} from '@/utils/constants';
 
 export default function Home() {
   return (
@@ -14,10 +15,10 @@ export default function Home() {
         width={'100vw'}
         pl={{
           base: 0,
-          lg: 80,
+          lg: sidebarWidth,
         }}
         pt={{
-          base: 16,
+          base: navbarHeight,
           lg: 0,
         }}
       >
