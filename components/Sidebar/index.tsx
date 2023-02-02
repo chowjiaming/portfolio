@@ -7,6 +7,7 @@ import SidebarFooter from './SidebarFooter';
 export default function Sidebar() {
   return (
     <Box
+      as={'nav'}
       display={{base: 'none', lg: 'flex'}}
       flexDir={'column'}
       position={'fixed'}

@@ -1,8 +1,13 @@
-import Navbar from '@/components/Navbar';
-import Seo from '@/components/Seo';
-import Sidebar from '@/components/Sidebar';
-import {Flex, Heading} from '@chakra-ui/react';
+import {Flex} from '@chakra-ui/react';
 import {sidebarWidth, navbarHeight} from '@/utils/constants';
+import Seo from '@/components/Seo';
+import Navbar from '@/components/Navbar';
+import Sidebar from '@/components/Sidebar';
+import Hero from '@/components/Hero';
+import About from '@/components/About';
+import Portfolio from '@/components/Portfolio';
+import Testimonial from '@/components/Testimonial';
+import Contact from '@/components/Contact';
 
 export default function Home(): JSX.Element {
   return (
@@ -11,8 +16,6 @@ export default function Home(): JSX.Element {
       <Flex
         as={'main'}
         direction={'column'}
-        height={'100vh'}
-        width={'100vw'}
         pl={{
           base: 0,
           lg: sidebarWidth,
@@ -24,7 +27,11 @@ export default function Home(): JSX.Element {
       >
         <Navbar />
         <Sidebar />
-        <Heading>Hello World 2023!!</Heading>
+        <Hero />
+        <About />
+        <Portfolio />
+        <Testimonial />
+        <Contact />
       </Flex>
     </>
   );

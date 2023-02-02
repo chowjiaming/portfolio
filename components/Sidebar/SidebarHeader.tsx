@@ -3,7 +3,7 @@ import {Flex} from '@chakra-ui/react';
 export default function SidebarHeader(): JSX.Element {
   return (
     <Flex
-      as={'header'}
+      as={'section'}
       flex={'1'}
       height={'100%'}
       width={'100%'}

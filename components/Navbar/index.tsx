@@ -6,6 +6,7 @@ import NavbarHeading from './NavbarHeading';
 export default function Navbar(): JSX.Element {
   return (
     <Box
+      as={'nav'}
       display={{base: 'flex', lg: 'none'}}
       justifyContent={'space-between'}
       alignItems={'center'}
