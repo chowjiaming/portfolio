@@ -1,5 +1,5 @@
 import {Box} from '@chakra-ui/react';
-import {sidebarWidth} from '@/utils/constants';
+import {SIDEBAR_WIDTH} from '@/utils/constants';
 import SidebarHeader from './SidebarHeader';
 import SidebarBody from './SidebarBody';
 import SidebarFooter from './SidebarFooter';
@@ -13,7 +13,7 @@ export default function Sidebar() {
       position={'fixed'}
       top={0}
       left={0}
-      width={sidebarWidth}
+      width={SIDEBAR_WIDTH}
       height={'100vh'}
       bg={'gray.200'}
     >

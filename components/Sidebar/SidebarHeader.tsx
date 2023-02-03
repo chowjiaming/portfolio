@@ -1,4 +1,5 @@
 import {Button, Flex, Heading} from '@chakra-ui/react';
+import {STANDARD_MARGIN} from '@/utils/constants';
 
 export default function SidebarHeader(): JSX.Element {
   return (
@@ -11,10 +12,10 @@ export default function SidebarHeader(): JSX.Element {
       alignItems={'center'}
       justifyContent={'space-between'}
     >
-      <Heading as={'h1'} ml={4}>
+      <Heading as={'h1'} ml={STANDARD_MARGIN}>
         Joseph Chow
       </Heading>
-      <Button mr={4}>Dark Mode</Button>
+      <Button mr={STANDARD_MARGIN}>Dark Mode</Button>
     </Flex>
   );
 }

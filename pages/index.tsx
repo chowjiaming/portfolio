@@ -1,5 +1,5 @@
 import {Flex} from '@chakra-ui/react';
-import {sidebarWidth, navbarHeight} from '@/utils/constants';
+import {SIDEBAR_WIDTH, NAVBAR_HEIGHT} from '@/utils/constants';
 import Seo from '@/components/Seo';
 import Navbar from '@/components/Navbar';
 import Sidebar from '@/components/Sidebar';
@@ -18,10 +18,10 @@ export default function Home(): JSX.Element {
         direction={'column'}
         pl={{
           base: 0,
-          lg: sidebarWidth,
+          lg: SIDEBAR_WIDTH,
         }}
         pt={{
-          base: navbarHeight,
+          base: NAVBAR_HEIGHT,
           lg: 0,
         }}
       >

@@ -1,5 +1,6 @@
 import {Box, Button, Flex, Heading, Text} from '@chakra-ui/react';
 import {heroContent} from '@/data/hero';
+import {STANDARD_MARGIN} from '@/utils/constants';
 import Image from 'next/image';
 import ReactTyped from 'react-typed';
 
@@ -25,7 +26,7 @@ export default function Hero(): JSX.Element {
         fontWeight="extrabold"
         textAlign="center"
         color="gray.900"
-        mt={4}
+        mt={STANDARD_MARGIN}
       >
         Hello, I&apos;m {heroContent.name}
       </Heading>
