@@ -1,4 +1,4 @@
-export const skillsContent = [
+export const content = [
   {
     name: 'React.Js',
     value: 95,

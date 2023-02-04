@@ -1,4 +1,4 @@
-export const mainContent = [
+export const nav = [
   {icon: 'home', itemName: 'Home', itemRoute: '#home', activeClass: 'active'},
   {icon: 'human', itemName: 'About', itemRoute: '#about', activeClass: ''},
   {
@@ -20,7 +20,7 @@ export const mainContent = [
     activeClass: '',
   },
 ];
-export const footerContent = {
+export const footer = {
   name: 'Joseph',
   email: 'contact@josephchow.dev',
   emailRef: 'mailto:contact@josephchow.dev',

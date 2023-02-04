@@ -1,5 +1,5 @@
 import {Button, Grid, GridItem, Heading, Progress} from '@chakra-ui/react';
-import {skillsContent} from '@/data/skills';
+import {content} from '@/data/skills';
 import {SECTION_SPACING, STANDARD_MARGIN} from '@/utils/constants';
 
 export default function AboutSkills(): JSX.Element {
@@ -10,7 +10,7 @@ export default function AboutSkills(): JSX.Element {
         gap={STANDARD_MARGIN}
         mb={SECTION_SPACING}
       >
-        {skillsContent.map((skill) => {
+        {content.map((skill) => {
           return (
             <GridItem key={skill.name}>
               <Heading as={'h3'} mb={2}>

@@ -1,4 +1,4 @@
-export const heroContent = {
+export const content = {
   shapeImage: '/img/profilepic.jpg',
   heroImage: '/img/profilepic.jpg',
   name: 'Joseph',

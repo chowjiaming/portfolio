@@ -1,5 +1,5 @@
 import {Button, Flex, VStack, chakra} from '@chakra-ui/react';
-import {mainContent} from '@/data/sidebar';
+import {nav} from '@/data/sidebar';
 import Image from 'next/image';
 import ScrollspyNav from 'react-scrollspy-nav';
 
@@ -27,7 +27,7 @@ export default function SidebarBody(): JSX.Element {
         scrollDuration="100"
       >
         <VStack spacing={8} align="stretch">
-          {mainContent.map((main) => (
+          {nav.map((main) => (
             <SidebarNavButton
               key={main.itemRoute}
               as={'a'}
