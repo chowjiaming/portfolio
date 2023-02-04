@@ -1,5 +1,3 @@
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
 import {SECTION_PADDING} from '@/utils/constants';
 import {Box, Flex} from '@chakra-ui/react';
 import {sliderSettings} from '@/utils/settings';
