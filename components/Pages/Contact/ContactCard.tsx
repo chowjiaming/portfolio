@@ -7,7 +7,7 @@ type ContactInfoProps = {
   icon: string;
   link: string;
 };
-export default function ContactInfo({
+export default function ContactCard({
   heading,
   value,
   icon,
@@ -26,7 +26,6 @@ export default function ContactInfo({
       <Stack>
         <CardBody>
           <Heading size="md">{heading}</Heading>
-
           <Text py="2">{value}</Text>
         </CardBody>
       </Stack>

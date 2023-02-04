@@ -1,8 +1,9 @@
-import {SECTION_PADDING} from '@/utils/constants';
+import {SECTION_PADDING, SECTION_SPACING} from '@/utils/constants';
 import {Flex, Grid} from '@chakra-ui/react';
 import {intro, content} from '@/data/contact';
 import SectionHeader from '@/components/Shared/SectionHeader';
-import ContactInfo from './ContactInfo';
+import ContactCard from './ContactCard';
+import ContactForm from './ContactForm/ContactForm';
 
 export default function Contact(): JSX.Element {
   return (
@@ -14,11 +15,12 @@ export default function Contact(): JSX.Element {
       height="100vh"
     >
       <SectionHeader heading={intro.heading} paragraph={intro.paragraph} />
-      <Grid templateColumns="repeat(3, 1fr)" gap={6}>
+      <Grid templateColumns="repeat(3, 1fr)" gap={6} mb={SECTION_SPACING}>
         {content.map((item) => (
-          <ContactInfo key={item.heading} {...item} />
+          <ContactCard key={item.heading} {...item} />
         ))}
       </Grid>
+      <ContactForm />
     </Flex>
   );
 }
