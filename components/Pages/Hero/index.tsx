@@ -18,6 +18,7 @@ export default function Hero(): JSX.Element {
     >
       <HeroImage>
         <Image
+          priority
           src={content.heroImage}
           alt="Profile picture"
           width={500}

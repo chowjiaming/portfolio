@@ -40,6 +40,10 @@ export default function SidebarBody(): JSX.Element {
                 alt={main.itemName}
                 width={20}
                 height={20}
+                style={{
+                  width: 'auto',
+                  height: 'auto',
+                }}
               />
               {main.itemName}
             </SidebarNavButton>
