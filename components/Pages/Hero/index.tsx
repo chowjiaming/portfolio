@@ -1,4 +1,4 @@
-import {Box, Button, Flex, Heading, Text} from '@chakra-ui/react';
+import {Box, Button, Flex, Heading, Text, chakra} from '@chakra-ui/react';
 import {content} from '@/data/hero';
 import {STANDARD_MARGIN} from '@/utils/constants';
 import Image from 'next/image';
@@ -9,17 +9,19 @@ export default function Hero(): JSX.Element {
     <Flex
       id={'home'}
       as="section"
-      justifyContent="center"
-      alignItems="center"
+      justify="center"
+      align="center"
       direction="column"
-      height="100vh"
+      h="100vh"
     >
-      <Image
-        src={content.heroImage}
-        alt="Profile picture"
-        width={500}
-        height={500}
-      />
+      <HeroImage>
+        <Image
+          src={content.heroImage}
+          alt="Profile picture"
+          width={500}
+          height={500}
+        />
+      </HeroImage>
       <Heading
         as="h1"
         fontSize={{base: '3xl', md: '4xl', lg: '5xl'}}
@@ -53,3 +55,10 @@ export default function Hero(): JSX.Element {
     </Flex>
   );
 }
+
+const HeroImage = chakra(Box, {
+  baseStyle: {
+    w: {base: 200, md: 245, lg: 300},
+    h: {base: 200, md: 245, lg: 300},
+  },
+});

@@ -12,7 +12,7 @@ export default function Contact(): JSX.Element {
       as="section"
       p={SECTION_PADDING}
       direction="column"
-      height="100vh"
+      h="100vh"
     >
       <SectionHeader heading={intro.heading} paragraph={intro.paragraph} />
       <Grid templateColumns="repeat(3, 1fr)" gap={6} mb={SECTION_SPACING}>

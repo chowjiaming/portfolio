@@ -8,11 +8,11 @@ export default function SidebarBody(): JSX.Element {
     <Flex
       as={'section'}
       flex={'4'}
-      height={'100%'}
-      width={'100%'}
+      h={'100%'}
+      w={'100%'}
       bg={'gray.300'}
-      alignItems={'center'}
-      justifyContent={'center'}
+      align={'center'}
+      justify={'center'}
     >
       <ScrollspyNav
         scrollTargetIds={[

@@ -13,7 +13,7 @@ export default function About(): JSX.Element {
       id={'about'}
       as="section"
       p={SECTION_PADDING}
-      height="100vh"
+      h="100vh"
       gap={SECTION_PADDING}
     >
       <Flex flex={'3'} flexDir={'column'}>

@@ -7,13 +7,13 @@ export default function SidebarFooter(): JSX.Element {
     <Flex
       as={'footer'}
       flex={'1'}
-      height={'100%'}
-      width={'100%'}
+      h={'full'}
+      w={'full'}
       bg={'gray.300'}
-      alignItems={'center'}
-      justifyContent={'center'}
+      align={'center'}
+      justify={'center'}
     >
-      <Flex alignItems={'center'}>
+      <Flex align={'center'}>
         <Avatar name={footer.name} src={'/img/avatar.jpg'} size="lg" />
         <Flex flexDir={'column'} ml={STANDARD_MARGIN}>
           <Heading as={'h3'}>{footer.name}</Heading>

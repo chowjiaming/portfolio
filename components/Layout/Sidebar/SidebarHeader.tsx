@@ -6,11 +6,11 @@ export default function SidebarHeader(): JSX.Element {
     <Flex
       as={'section'}
       flex={'1'}
-      height={'100%'}
-      width={'100%'}
+      h={'full%'}
+      w={'full'}
       bg={'gray.300'}
-      alignItems={'center'}
-      justifyContent={'space-between'}
+      align={'center'}
+      justify={'space-between'}
     >
       <Heading as={'h1'} ml={STANDARD_MARGIN}>
         Joseph Chow

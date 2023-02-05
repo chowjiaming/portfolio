@@ -21,7 +21,7 @@ const floating = defineStyle({
       top: 0,
       left: 0,
       zIndex: 2,
-      position: 'absolute',
+      pos: 'absolute',
       backgroundColor: 'white',
       pointerEvents: 'none',
       mx: 3,

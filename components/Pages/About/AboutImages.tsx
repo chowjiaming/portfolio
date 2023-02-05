@@ -6,8 +6,8 @@ export default function AboutImages(): JSX.Element {
       flex={'2'}
       w={'full'}
       border={'1px solid red'}
-      alignItems={'center'}
-      justifyContent={'center'}
+      align={'center'}
+      justify={'center'}
     >
       Images
     </Flex>

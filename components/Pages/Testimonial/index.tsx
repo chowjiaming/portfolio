@@ -13,7 +13,7 @@ export default function Testimonial(): JSX.Element {
       as="section"
       p={SECTION_PADDING}
       direction="column"
-      height="100vh"
+      h="100vh"
     >
       <SectionHeader heading={intro.heading} paragraph={intro.paragraph} />
       <Slider {...sliderSettings}>

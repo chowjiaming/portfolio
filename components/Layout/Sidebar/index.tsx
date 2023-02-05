@@ -10,11 +10,11 @@ export default function Sidebar() {
       as={'nav'}
       display={{base: 'none', lg: 'flex'}}
       flexDir={'column'}
-      position={'fixed'}
+      pos={'fixed'}
       top={0}
       left={0}
-      width={SIDEBAR_WIDTH}
-      height={'100vh'}
+      w={SIDEBAR_WIDTH}
+      h={'100vh'}
       bg={'gray.200'}
     >
       <SidebarHeader />
