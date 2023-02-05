@@ -14,9 +14,10 @@ export default function About(): JSX.Element {
       as="section"
       p={SECTION_PADDING}
       h="100vh"
+      direction={{base: 'column', lg: 'row'}}
       gap={SECTION_PADDING}
     >
-      <Flex flex={'3'} flexDir={'column'}>
+      <Flex flex={'3'} direction={'column'}>
         <Box mb={SECTION_SPACING}>
           <Heading as={'h1'}>About Me</Heading>
         </Box>

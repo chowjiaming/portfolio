@@ -1,18 +1,20 @@
-import {Box, Button, Flex, Heading, Text, chakra} from '@chakra-ui/react';
+import {Box, Button, Heading, Text, VStack, chakra} from '@chakra-ui/react';
 import {content} from '@/data/hero';
-import {STANDARD_MARGIN} from '@/utils/constants';
+import {SECTION_PADDING, STANDARD_MARGIN} from '@/utils/constants';
 import Image from 'next/image';
 import ReactTyped from 'react-typed';
 
 export default function Hero(): JSX.Element {
   return (
-    <Flex
+    <VStack
       id={'home'}
       as="section"
       justify="center"
       align="center"
       direction="column"
+      p={SECTION_PADDING}
       h="100vh"
+      spacing={STANDARD_MARGIN}
     >
       <HeroImage>
         <Image
@@ -48,11 +50,20 @@ export default function Hero(): JSX.Element {
           cursorChar="|"
         />
       </Box>
-      <Text>{content.description}</Text>
+      <Text
+        maxW={{
+          base: 'xl',
+          md: '2xl',
+          lg: '3xl',
+        }}
+        textAlign="center"
+      >
+        {content.description}
+      </Text>
       <Button as={'a'} variant={'link'} href="/img/profilepic.jpg" download>
         Download CV
       </Button>
-    </Flex>
+    </VStack>
   );
 }
 

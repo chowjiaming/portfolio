@@ -1,5 +1,5 @@
-import {Flex} from '@chakra-ui/react';
-import {NAVBAR_HEIGHT} from '@/utils/constants';
+import {Flex, Spacer} from '@chakra-ui/react';
+import {NAVBAR_HEIGHT, STANDARD_MARGIN} from '@/utils/constants';
 import NavbarButtons from './NavbarButtons';
 import NavbarHeading from './NavbarHeading';
 
@@ -8,17 +8,18 @@ export default function Navbar(): JSX.Element {
     <Flex
       as={'nav'}
       display={{base: 'flex', lg: 'none'}}
-      justify={'space-between'}
       align={'center'}
       pos={'fixed'}
       top={0}
       left={0}
       w={'full'}
-      px={4}
+      px={STANDARD_MARGIN}
       h={NAVBAR_HEIGHT}
       bg={'gray.200'}
+      zIndex={2}
     >
       <NavbarHeading />
+      <Spacer />
       <NavbarButtons />
     </Flex>
   );

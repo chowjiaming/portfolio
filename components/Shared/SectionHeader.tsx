@@ -10,7 +10,12 @@ export default function SectionHeader({
   paragraph,
 }: SectionHeaderProps): JSX.Element {
   return (
-    <Box w={'2xl'}>
+    <Box
+      w={{
+        base: '100%',
+        lg: '2xl',
+      }}
+    >
       <Heading as={'h1'} mt={SECTION_SPACING} mb={STANDARD_MARGIN * 2}>
         {heading}
       </Heading>

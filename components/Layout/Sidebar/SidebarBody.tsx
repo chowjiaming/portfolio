@@ -2,6 +2,7 @@ import {Button, Flex, VStack, chakra} from '@chakra-ui/react';
 import {nav} from '@/data/sidebar';
 import Image from 'next/image';
 import ScrollspyNav from 'react-scrollspy-nav';
+import {STANDARD_MARGIN} from '@/utils/constants';
 
 export default function SidebarBody(): JSX.Element {
   return (
@@ -52,7 +53,7 @@ export default function SidebarBody(): JSX.Element {
 const SidebarNavButton = chakra(Button, {
   baseStyle: {
     display: 'flex',
-    gap: 4,
+    gap: STANDARD_MARGIN,
     '&.is-active': {
       color: 'red.500',
     },

@@ -15,7 +15,14 @@ export default function Contact(): JSX.Element {
       h="100vh"
     >
       <SectionHeader heading={intro.heading} paragraph={intro.paragraph} />
-      <Grid templateColumns="repeat(3, 1fr)" gap={6} mb={SECTION_SPACING}>
+      <Grid
+        templateColumns={{
+          base: 'repeat(1, 1fr)',
+          lg: 'repeat(3, 1fr)',
+        }}
+        gap={6}
+        mb={SECTION_SPACING}
+      >
         {content.map((item) => (
           <ContactCard key={item.heading} {...item} />
         ))}

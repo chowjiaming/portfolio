@@ -5,6 +5,7 @@ import {useForm} from 'react-hook-form';
 import {yupResolver} from '@hookform/resolvers/yup';
 import {contactValidationSchema} from '@/utils/validations';
 import ContactFormInput from './ContactFormInput';
+import {STANDARD_MARGIN} from '@/utils/constants';
 
 export default function ContactForm(): JSX.Element {
   const toast = useToast();
@@ -31,7 +32,7 @@ export default function ContactForm(): JSX.Element {
 
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <VStack spacing={4} mb={4}>
+      <VStack spacing={STANDARD_MARGIN} mb={STANDARD_MARGIN}>
         <ContactFormInput
           name="name"
           label="Name"
