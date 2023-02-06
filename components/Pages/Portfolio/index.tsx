@@ -13,7 +13,7 @@ export default function Portfolio(): JSX.Element {
       as="section"
       p={SECTION_PADDING}
       direction="column"
-      h="100vh"
+      minH="100vh"
     >
       <SectionHeader heading={intro.heading} paragraph={intro.paragraph} />
       <Slider {...sliderSettings}>

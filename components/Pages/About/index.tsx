@@ -11,7 +11,7 @@ export default function About(): JSX.Element {
       id={'about'}
       as="section"
       p={SECTION_PADDING}
-      h="100vh"
+      minH="100vh"
       direction={{base: 'column', lg: 'row'}}
       gap={SECTION_PADDING}
     >

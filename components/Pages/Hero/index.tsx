@@ -13,7 +13,7 @@ export default function Hero(): JSX.Element {
       align="center"
       direction="column"
       p={SECTION_PADDING}
-      h="100vh"
+      minH="100vh"
       spacing={STANDARD_MARGIN}
     >
       <HeroImage>
