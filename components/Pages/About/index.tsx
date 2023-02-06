@@ -1,9 +1,9 @@
-import {Box, Flex, Heading} from '@chakra-ui/react';
+import {Box, Flex, Heading, VStack} from '@chakra-ui/react';
 import {SECTION_PADDING, SECTION_SPACING} from '@/utils/constants';
-import {intro} from '@/data/about';
+import {intro, experience} from '@/data/about';
 import SectionHeader from '@/components/Shared/SectionHeader';
+import ExperienceCard from '@/components/Shared/ExperienceCard';
 import AboutSkills from './AboutSkills';
-import AboutImages from './AboutImages';
 
 export default function About(): JSX.Element {
   return (
@@ -24,7 +24,11 @@ export default function About(): JSX.Element {
         ))}
         <AboutSkills />
       </Flex>
-      <AboutImages />
+      <VStack flex={'2'} spacing={SECTION_SPACING}>
+        {experience.map((item) => (
+          <ExperienceCard key={item.company} {...item} />
+        ))}
+      </VStack>
     </Flex>
   );
 }
