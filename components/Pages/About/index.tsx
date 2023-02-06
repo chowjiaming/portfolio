@@ -1,9 +1,7 @@
-import {Box, Flex, Heading, Text} from '@chakra-ui/react';
-import {
-  SECTION_PADDING,
-  SECTION_SPACING,
-  STANDARD_MARGIN,
-} from '@/utils/constants';
+import {Box, Flex, Heading} from '@chakra-ui/react';
+import {SECTION_PADDING, SECTION_SPACING} from '@/utils/constants';
+import {intro} from '@/data/about';
+import SectionHeader from '@/components/Shared/SectionHeader';
 import AboutSkills from './AboutSkills';
 import AboutImages from './AboutImages';
 
@@ -21,29 +19,9 @@ export default function About(): JSX.Element {
         <Box mb={SECTION_SPACING}>
           <Heading as={'h1'}>About Me</Heading>
         </Box>
-        <Box mb={SECTION_SPACING}>
-          <Heading as={'h2'} pb={STANDARD_MARGIN}>
-            Hi, I&apos;m{' '}
-            <Text as={'span'} color={'primary'}>
-              Joseph Chow
-            </Text>
-          </Heading>
-          <Text>
-            I&apos;m a software engineer based in Toronto, Canada. I specialize
-            in building (and occasionally designing) exceptional websites,
-            applications, and everything in between.
-          </Text>
-        </Box>
-        <Box mb={SECTION_SPACING}>
-          <Heading as={'h2'} pb={STANDARD_MARGIN}>
-            What are my skills?
-          </Heading>
-          <Text>
-            I&apos;m a full stack developer with a passion for building
-            beautiful, intuitive, and performant web applications. I&apos;m also
-            a photographer and a graphic designer.
-          </Text>
-        </Box>
+        {intro.map((item) => (
+          <SectionHeader key={item.heading} {...item} marginTop={0} />
+        ))}
         <AboutSkills />
       </Flex>
       <AboutImages />

@@ -1,7 +1,7 @@
 export const intro = {
   heading: 'Testimonial',
   paragraph:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    'Here is some feedback from clients and colleagues who have had the pleasure of working with me. Their kind words are a testament to my commitment to delivering exceptional work and providing a positive experience for everyone involved. I take pride in my ability to not only meet, but exceed, the expectations of those I work with. The testimonials here provide a glimpse into the level of satisfaction that I have been able to deliver, and I am proud to share them with you. If you are considering working with me, take a look at what others have to say about their experiences.',
 };
 
 export const content = [

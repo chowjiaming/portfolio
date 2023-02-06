@@ -1,7 +1,7 @@
 export const intro = {
   heading: 'Contact',
   paragraph:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+    'Please do not be a stranger. Whether you have a question or just want to say hello, I would love to hear from you. I am dedicated to providing prompt and professional communication, and I am always available to answer any questions you may have. Do not hesitate to reach out if you are interested in working with me. I look forward to hearing from you soon!',
 };
 
 export const content = [

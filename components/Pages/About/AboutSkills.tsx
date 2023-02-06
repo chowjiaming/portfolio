@@ -13,7 +13,7 @@ export default function AboutSkills(): JSX.Element {
         {content.map((skill) => {
           return (
             <GridItem key={skill.name}>
-              <Heading as={'h3'} mb={2}>
+              <Heading as={'h3'} mb={2} fontSize="xl">
                 {skill.name}
               </Heading>
               <Progress value={skill.value} />
