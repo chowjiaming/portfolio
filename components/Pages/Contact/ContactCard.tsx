@@ -1,10 +1,20 @@
-import {Card, CardBody, Heading, Link, Stack, Text} from '@chakra-ui/react';
-import Image from 'next/image';
+import {
+  Card,
+  CardBody,
+  Flex,
+  Heading,
+  Icon,
+  Link,
+  Stack,
+  Text,
+} from '@chakra-ui/react';
+import type {IconType} from 'react-icons';
+import {SECTION_PADDING} from '@/utils/constants';
 
 type ContactInfoProps = {
   heading: string;
   value: string;
-  icon: string;
+  icon: IconType;
   link: string;
 };
 export default function ContactCard({
@@ -22,13 +32,17 @@ export default function ContactCard({
       overflow="hidden"
       variant="outline"
     >
-      <Image src={icon} alt={heading} width={100} height={25} />
-      <Stack>
-        <CardBody>
-          <Heading size="md">{heading}</Heading>
-          <Text py="2">{value}</Text>
-        </CardBody>
-      </Stack>
+      <Flex>
+        <Flex align={'center'} ml={SECTION_PADDING}>
+          <Icon as={icon} boxSize="3rem" color="blue.500" />
+        </Flex>
+        <Stack>
+          <CardBody>
+            <Heading size="md">{heading}</Heading>
+            <Text py="2">{value}</Text>
+          </CardBody>
+        </Stack>
+      </Flex>
     </Card>
   );
 }

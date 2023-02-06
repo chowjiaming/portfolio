@@ -1,3 +1,5 @@
+import {FaPhoneAlt, FaMailBulk, FaLocationArrow} from 'react-icons/fa';
+
 export const intro = {
   heading: 'Contact',
   paragraph:
@@ -8,19 +10,19 @@ export const content = [
   {
     heading: 'Phone',
     value: '647-964-3616',
-    icon: '/img/phone.png',
+    icon: FaPhoneAlt,
     link: 'Tel: +16479643616',
   },
   {
     heading: 'Email',
     value: 'contact@josephchow.dev',
-    icon: '/img/email.png',
+    icon: FaMailBulk,
     link: 'mailto:contact@josephchow.dev',
   },
   {
     heading: 'Location',
     value: 'Toronto, ON, Canada',
-    icon: '/img/location.png',
+    icon: FaLocationArrow,
     link: 'https://www.google.com/maps/place/Downtown+Toronto',
   },
 ];
