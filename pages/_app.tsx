@@ -3,12 +3,15 @@ import 'slick-carousel/slick/slick-theme.css';
 import '@/styles/globals.css';
 import type {AppProps} from 'next/app';
 import {ChakraProvider} from '@chakra-ui/react';
+import {SidebarProvider} from '@/context/SidebarContext';
 import {theme} from '@/theme';
 
 export default function App({Component, pageProps}: AppProps) {
   return (
     <ChakraProvider theme={theme}>
-      <Component {...pageProps} />
+      <SidebarProvider>
+        <Component {...pageProps} />
+      </SidebarProvider>
     </ChakraProvider>
   );
 }

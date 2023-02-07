@@ -1,14 +1,19 @@
 import {Box} from '@chakra-ui/react';
 import {SIDEBAR_WIDTH} from '@/utils/constants';
+import {useSidebar} from '@/context/SidebarContext';
 import SidebarHeader from './SidebarHeader';
 import SidebarBody from './SidebarBody';
 import SidebarFooter from './SidebarFooter';
 
 export default function Sidebar() {
+  const {isOpen} = useSidebar();
   return (
     <Box
       as={'nav'}
-      display={{base: 'none', lg: 'flex'}}
+      display={{
+        base: isOpen ? 'flex' : 'none',
+        lg: 'flex',
+      }}
       flexDir={'column'}
       pos={'fixed'}
       top={0}
