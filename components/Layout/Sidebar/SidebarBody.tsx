@@ -9,8 +9,8 @@ export default function SidebarBody(): JSX.Element {
     <Flex
       as={'section'}
       flex={'4'}
-      h={'100%'}
-      w={'100%'}
+      h={'full'}
+      w={'full'}
       bg={'gray.300'}
       align={'center'}
       justify={'center'}

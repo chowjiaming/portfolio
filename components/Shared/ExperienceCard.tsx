@@ -13,7 +13,12 @@ export default function ExperienceCard({
   description,
 }: ExperienceCardProps): JSX.Element {
   return (
-    <Card maxW="sm">
+    <Card
+      maxW={{
+        base: 'full',
+        lg: '2xl',
+      }}
+    >
       <CardBody>
         <Stack mt={6} spacing={3}>
           <Heading as={'h3'} size="xl">

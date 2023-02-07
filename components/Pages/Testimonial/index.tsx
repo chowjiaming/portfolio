@@ -1,5 +1,5 @@
 import {SECTION_PADDING} from '@/utils/constants';
-import {Box, Flex} from '@chakra-ui/react';
+import {Box, Flex, chakra, shouldForwardProp} from '@chakra-ui/react';
 import {sliderSettings} from '@/utils/settings';
 import {intro, content} from '@/data/testimonial';
 import Slider from 'react-slick';
@@ -18,12 +18,16 @@ export default function Testimonial(): JSX.Element {
       <SectionHeader heading={intro.heading} paragraph={intro.paragraph} />
       <Slider {...sliderSettings}>
         {content.map((item) => (
-          <Box key={item.name} w="full" h="full">
-            <Image
+          <Box key={item.name} w="full" h="full" p={SECTION_PADDING}>
+            <TestimonialImage
               src={item.image}
               alt={item.name}
               width={1000}
               height={1000}
+              css={{
+                height: 'auto',
+                width: 'auto',
+              }}
             />
           </Box>
         ))}
@@ -31,3 +35,17 @@ export default function Testimonial(): JSX.Element {
     </Flex>
   );
 }
+
+const TestimonialImage = chakra(Image, {
+  shouldForwardProp: (prop) =>
+    shouldForwardProp(prop) ||
+    prop === 'width' ||
+    prop === 'height' ||
+    prop === 'alt',
+  baseStyle: {
+    _hover: {
+      transform: 'scale(1.1)',
+      transition: 'all 0.3s ease-in-out',
+    },
+  },
+});

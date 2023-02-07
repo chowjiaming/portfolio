@@ -6,10 +6,21 @@ export const sliderSettings = {
   slidesToShow: 3,
   slidesToScroll: 1,
   initialSlide: 1,
-  // focusOnSelect: true,
+  focusOnSelect: true,
   responsive: [
     {
-      breakpoint: 575,
+      breakpoint: 1280,
+      settings: {
+        slidesToShow: 2,
+        arrow: false,
+        autoplay: false,
+        draggable: true,
+        speed: 300,
+        dots: true,
+      },
+    },
+    {
+      breakpoint: 768,
       settings: {
         slidesToShow: 1,
         arrow: false,

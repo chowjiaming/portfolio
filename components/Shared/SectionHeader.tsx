@@ -16,7 +16,7 @@ export default function SectionHeader({
   return (
     <Box
       w={{
-        base: '100%',
+        base: 'full',
         lg: '4xl',
       }}
     >
