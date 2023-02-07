@@ -1,3 +1,26 @@
+export const sidebarSettings = {
+  sideVariants: {
+    closed: {
+      transition: {
+        staggerChildren: 0.05,
+        staggerDirection: -1,
+      },
+    },
+    open: {
+      transition: {
+        staggerChildren: 0.05,
+        staggerDirection: 1,
+      },
+    },
+  },
+  itemVariants: {
+    closed: {
+      opacity: 0,
+    },
+    open: {opacity: 1},
+  },
+};
+
 export const sliderSettings = {
   dots: true,
   lazyLoad: true,

@@ -1,13 +1,21 @@
 import {Button, Flex, VStack, chakra} from '@chakra-ui/react';
+import {motion} from 'framer-motion';
+import {useSidebar} from '@/context/SidebarContext';
 import {nav} from '@/data/sidebar';
+import {sidebarSettings} from '@/utils/settings';
+import {STANDARD_MARGIN} from '@/utils/constants';
 import Image from 'next/image';
 import ScrollspyNav from 'react-scrollspy-nav';
-import {STANDARD_MARGIN} from '@/utils/constants';
 
 export default function SidebarBody(): JSX.Element {
+  const {onToggle} = useSidebar();
   return (
     <Flex
-      as={'section'}
+      as={motion.div}
+      initial="closed"
+      animate="open"
+      exit="closed"
+      variants={sidebarSettings.sideVariants}
       flex={'4'}
       h={'full'}
       w={'full'}
@@ -31,9 +39,12 @@ export default function SidebarBody(): JSX.Element {
           {nav.map((main) => (
             <SidebarNavButton
               key={main.itemRoute}
-              as={'a'}
+              as={motion.a}
+              whileHover={{scale: 1.1}}
+              variants={sidebarSettings.itemVariants}
               href={main.itemRoute}
               variant={'link'}
+              onClick={onToggle}
             >
               <Image
                 src={`svg/${main.icon}.svg`}

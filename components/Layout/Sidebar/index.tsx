@@ -1,4 +1,5 @@
-import {Box} from '@chakra-ui/react';
+import {Flex} from '@chakra-ui/react';
+import {AnimatePresence, motion} from 'framer-motion';
 import {SIDEBAR_WIDTH} from '@/utils/constants';
 import {useSidebar} from '@/context/SidebarContext';
 import SidebarHeader from './SidebarHeader';
@@ -8,24 +9,32 @@ import SidebarFooter from './SidebarFooter';
 export default function Sidebar() {
   const {isOpen} = useSidebar();
   return (
-    <Box
-      as={'nav'}
-      display={{
-        base: isOpen ? 'flex' : 'none',
-        lg: 'flex',
-      }}
-      flexDir={'column'}
-      pos={'fixed'}
-      top={0}
-      left={0}
-      w={SIDEBAR_WIDTH}
-      h={'100vh'}
-      bg={'gray.200'}
-      zIndex={999}
-    >
-      <SidebarHeader />
-      <SidebarBody />
-      <SidebarFooter />
-    </Box>
+    <AnimatePresence>
+      {isOpen && (
+        <Flex
+          as={motion.nav}
+          initial={{width: 0}}
+          animate={{
+            width: 300,
+          }}
+          exit={{
+            width: 0,
+            transition: {delay: 0.3, duration: 0.2},
+          }}
+          flexDir={'column'}
+          pos={'fixed'}
+          top={0}
+          left={0}
+          w={SIDEBAR_WIDTH}
+          h={'100vh'}
+          bg={'gray.200'}
+          zIndex={999}
+        >
+          <SidebarHeader />
+          <SidebarBody />
+          <SidebarFooter />
+        </Flex>
+      )}
+    </AnimatePresence>
   );
 }

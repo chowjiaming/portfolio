@@ -3,11 +3,15 @@ import {useDisclosure} from '@chakra-ui/react';
 
 type SidebarContextType = {
   isOpen: boolean;
+  onOpen: () => void;
+  onClose: () => void;
   onToggle: () => void;
 };
 
 const SidebarContextDefaultValues: SidebarContextType = {
   isOpen: false,
+  onOpen: () => null,
+  onClose: () => null,
   onToggle: () => null,
 };
 
@@ -23,10 +27,10 @@ type SidebarProviderProps = {
   children: React.ReactNode;
 };
 export function SidebarProvider({children}: SidebarProviderProps): JSX.Element {
-  const {isOpen, onToggle} = useDisclosure();
+  const {isOpen, onOpen, onClose, onToggle} = useDisclosure();
 
   return (
-    <SidebarContext.Provider value={{isOpen, onToggle}}>
+    <SidebarContext.Provider value={{isOpen, onOpen, onClose, onToggle}}>
       {children}
     </SidebarContext.Provider>
   );
