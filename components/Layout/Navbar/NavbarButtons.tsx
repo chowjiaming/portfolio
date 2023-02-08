@@ -3,6 +3,8 @@ import {Button, ButtonGroup} from '@chakra-ui/react';
 import {motion, SVGMotionProps} from 'framer-motion';
 import {useSidebar} from '@/context/SidebarContext';
 import {RefAttributes} from 'react';
+import ColorModeToggle from '@/components/Shared/ColorModeToggle';
+import {STANDARD_MARGIN} from '@/utils/constants';
 
 const Path = (
   props: JSX.IntrinsicAttributes &
@@ -22,16 +24,17 @@ export default function NavbarButtons(): JSX.Element {
   const containerRef = useRef(null);
   const {isOpen, onToggle} = useSidebar();
   return (
-    <ButtonGroup>
-      <Button>Dark Mode</Button>
+    <ButtonGroup spacing={STANDARD_MARGIN}>
+      <ColorModeToggle />
       <Button
         as={motion.button}
+        variant={'unstyled'}
         initial={false}
         animate={isOpen ? 'open' : 'closed'}
         ref={containerRef}
         onClick={onToggle}
       >
-        <svg width="23" height="23" viewBox="0 0 23 23">
+        <svg width="27" height="23" viewBox="0 0 20 20">
           <Path
             variants={{
               closed: {d: 'M 2 2.5 L 20 2.5'},

@@ -1,7 +1,8 @@
-import {Button, Flex, Heading, Spacer} from '@chakra-ui/react';
+import {Flex, Heading} from '@chakra-ui/react';
 import {motion} from 'framer-motion';
 import {STANDARD_MARGIN} from '@/utils/constants';
 import {sidebarSettings} from '@/utils/settings';
+import ColorModeToggle from '@/components/Shared/ColorModeToggle';
 
 export default function SidebarHeader(): JSX.Element {
   return (
@@ -12,26 +13,18 @@ export default function SidebarHeader(): JSX.Element {
       exit="closed"
       variants={sidebarSettings.sideVariants}
       flex={'1'}
-      h={'full%'}
+      h={'full'}
       w={'full'}
       bg={'gray.300'}
+      direction={'column'}
+      justify={'center'}
       align={'center'}
+      gap={STANDARD_MARGIN}
     >
-      <Heading
-        as={motion.h1}
-        variants={sidebarSettings.itemVariants}
-        ml={STANDARD_MARGIN}
-      >
+      <Heading as={motion.h1} variants={sidebarSettings.itemVariants}>
         Joseph Chow
       </Heading>
-      <Spacer />
-      <Button
-        as={motion.button}
-        variants={sidebarSettings.itemVariants}
-        mr={STANDARD_MARGIN}
-      >
-        Dark Mode
-      </Button>
+      <ColorModeToggle />
     </Flex>
   );
 }
