@@ -28,6 +28,9 @@ const floating = defineStyle({
       px: 1,
       my: 2,
       transformOrigin: 'left top',
+      _dark: {
+        backgroundColor: 'gray.800',
+      },
     },
   },
 });

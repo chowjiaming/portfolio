@@ -27,6 +27,9 @@ export default function Home(): JSX.Element {
   return (
     <>
       <Seo pageTitle="Portfolio" />
+
+      <Navbar />
+      <Sidebar />
       <Flex
         as={'main'}
         ref={elementRef}
@@ -41,8 +44,6 @@ export default function Home(): JSX.Element {
           lg: 0,
         }}
       >
-        <Navbar />
-        <Sidebar />
         <Hero />
         <About />
         <Portfolio />

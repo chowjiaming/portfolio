@@ -12,8 +12,12 @@ export default function About(): JSX.Element {
       as="section"
       p={SECTION_PADDING}
       minH="100vh"
-      align={{base: 'flex-start', xl: 'center'}}
-      direction={{base: 'column', xl: 'row'}}
+      align={{base: 'flex-start', '2xl': 'center'}}
+      direction={{base: 'column', '2xl': 'row'}}
+      gap={{
+        base: 0,
+        xl: SECTION_PADDING,
+      }}
     >
       <Flex flex={'3'} direction={'column'}>
         {intro.map((item) => (

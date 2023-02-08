@@ -21,8 +21,8 @@ export default function Hero(): JSX.Element {
           priority
           src={content.heroImage}
           alt="Profile picture"
-          width={500}
-          height={500}
+          width={400}
+          height={400}
         />
       </HeroImage>
       <Heading
@@ -75,7 +75,7 @@ export default function Hero(): JSX.Element {
 
 const HeroImage = chakra(Box, {
   baseStyle: {
-    w: {base: 200, md: 245, lg: 300},
-    h: {base: 200, md: 245, lg: 300},
+    w: {base: 300, md: 345, lg: 400},
+    h: {base: 300, md: 345, lg: 400},
   },
 });

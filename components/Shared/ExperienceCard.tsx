@@ -1,3 +1,4 @@
+import {STANDARD_MARGIN} from '@/utils/constants';
 import {Card, CardBody, Heading, Stack, Text} from '@chakra-ui/react';
 
 export type ExperienceCardProps = {
@@ -20,7 +21,7 @@ export default function ExperienceCard({
       }}
     >
       <CardBody>
-        <Stack mt={6} spacing={3}>
+        <Stack spacing={2}>
           <Heading as={'h3'} size="xl">
             {position}
           </Heading>
