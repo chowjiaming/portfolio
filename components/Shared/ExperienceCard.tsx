@@ -1,4 +1,3 @@
-import {STANDARD_MARGIN} from '@/utils/constants';
 import {Card, CardBody, Heading, Stack, Text} from '@chakra-ui/react';
 
 export type ExperienceCardProps = {

@@ -27,9 +27,9 @@ export default function ContactCard({
     <Card
       as={Link}
       href={link}
-      target="_blank"
       direction={{base: 'column', sm: 'row'}}
       overflow="hidden"
+      isExternal
     >
       <Flex>
         <Flex align={'center'} ml={SECTION_PADDING}>

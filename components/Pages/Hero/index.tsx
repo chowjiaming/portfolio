@@ -1,8 +1,18 @@
-import {Box, Button, Heading, Text, VStack, chakra} from '@chakra-ui/react';
-import {content} from '@/data/hero';
+import {
+  Box,
+  Button,
+  Heading,
+  Text,
+  VStack,
+  chakra,
+  Divider,
+  HStack,
+} from '@chakra-ui/react';
+import {content, social} from '@/data/hero';
 import {SECTION_PADDING, STANDARD_MARGIN} from '@/utils/constants';
 import Image from 'next/image';
 import ReactTyped from 'react-typed';
+import SocialIcon from './SocialIcon';
 
 export default function Hero(): JSX.Element {
   return (
@@ -34,7 +44,7 @@ export default function Hero(): JSX.Element {
       >
         Hello, I&apos;m {content.name}
       </Heading>
-      <Box>
+      <VStack spacing={SECTION_PADDING}>
         <ReactTyped
           loop
           typeSpeed={150}
@@ -55,20 +65,36 @@ export default function Hero(): JSX.Element {
             fontWeight: 'bold',
           }}
         />
-      </Box>
-      <Text
-        maxW={{
-          base: 'xl',
-          md: '2xl',
-          lg: '3xl',
-        }}
-        textAlign="center"
-      >
-        {content.description}
-      </Text>
-      <Button as={'a'} variant={'link'} href="/img/profilepic.jpg" download>
-        Download CV
-      </Button>
+        <Text
+          maxW={{
+            base: 'xl',
+            md: '2xl',
+            lg: '3xl',
+          }}
+          textAlign="center"
+        >
+          {content.description}
+        </Text>
+        <HStack spacing={STANDARD_MARGIN} h={STANDARD_MARGIN}>
+          {social.map((item, i) => {
+            return (
+              <>
+                <SocialIcon key={item.name} {...item} />
+                {i !== social.length - 1 && (
+                  <Divider
+                    orientation={'vertical'}
+                    color={'white'}
+                    _dark={{color: 'grey.800'}}
+                  />
+                )}
+              </>
+            );
+          })}
+        </HStack>
+        <Button as={'a'} variant={'link'} href="/img/profilepic.jpg" download>
+          Download CV
+        </Button>
+      </VStack>
     </VStack>
   );
 }
