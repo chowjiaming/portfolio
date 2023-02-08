@@ -1,5 +1,9 @@
 import {Flex, VStack} from '@chakra-ui/react';
-import {SECTION_PADDING, SECTION_SPACING} from '@/utils/constants';
+import {
+  SECTION_PADDING,
+  SECTION_SPACING,
+  STANDARD_MARGIN,
+} from '@/utils/constants';
 import {intro, experience} from '@/data/about';
 import SectionHeader from '@/components/Shared/SectionHeader';
 import ExperienceCard from '@/components/Shared/ExperienceCard';
@@ -11,8 +15,12 @@ export default function About(): JSX.Element {
       id={'about'}
       as="section"
       p={SECTION_PADDING}
+      gap={{
+        base: 0,
+        lg: STANDARD_MARGIN,
+      }}
       minH="100vh"
-      direction={{base: 'column', lg: 'row'}}
+      direction={{base: 'column', xl: 'row'}}
     >
       <Flex flex={'3'} direction={'column'}>
         {intro.map((item) => (

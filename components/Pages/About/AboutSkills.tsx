@@ -6,7 +6,11 @@ export default function AboutSkills(): JSX.Element {
   return (
     <>
       <Grid
-        templateColumns="repeat(2, 1fr)"
+        templateColumns={{
+          base: 'repeat(2, 1fr)',
+          lg: 'repeat(1, 1fr)',
+          xl: 'repeat(2, 1fr)',
+        }}
         gap={STANDARD_MARGIN}
         mb={SECTION_SPACING}
       >

@@ -16,7 +16,7 @@ export default function ExperienceCard({
     <Card
       maxW={{
         base: 'full',
-        lg: '2xl',
+        xl: '2xl',
       }}
     >
       <CardBody>

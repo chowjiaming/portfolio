@@ -17,7 +17,9 @@ export default function SectionHeader({
     <Box
       w={{
         base: 'full',
-        lg: '4xl',
+        lg: 'lg',
+        xl: 'xl',
+        '2xl': '2xl',
       }}
     >
       <Heading
