@@ -27,6 +27,11 @@ export const enterExitSpin = {
   exit: {opacity: 0, scale: 0.5, x: 0, rotate: 180},
 };
 
+export const enlargeAndSpin = {
+  scale: [1, 2, 2, 1, 1],
+  rotate: [0, 0, 270, 270, 0],
+};
+
 export const sliderSettings = {
   dots: true,
   lazyLoad: true,

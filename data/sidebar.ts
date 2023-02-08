@@ -1,4 +1,6 @@
-export const nav = [
+import {NavButtonProps} from '@/components/Layout/Sidebar/NavButton';
+
+export const nav: NavButtonProps[] = [
   {icon: 'home', itemName: 'Home', itemRoute: '#home', activeClass: 'active'},
   {icon: 'human', itemName: 'About', itemRoute: '#about', activeClass: ''},
   {
