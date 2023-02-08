@@ -15,7 +15,6 @@ export default function SidebarHeader(): JSX.Element {
       flex={'1'}
       h={'full'}
       w={'full'}
-      bg={'gray.300'}
       direction={'column'}
       justify={'center'}
       align={'center'}

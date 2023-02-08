@@ -1,4 +1,3 @@
-import {useRef} from 'react';
 import {Button, ButtonGroup} from '@chakra-ui/react';
 import {motion, SVGMotionProps} from 'framer-motion';
 import {useSidebar} from '@/context/SidebarContext';
@@ -21,7 +20,6 @@ const Path = (
 );
 
 export default function NavbarButtons(): JSX.Element {
-  const containerRef = useRef(null);
   const {isOpen, onToggle} = useSidebar();
   return (
     <ButtonGroup spacing={STANDARD_MARGIN}>
@@ -31,7 +29,6 @@ export default function NavbarButtons(): JSX.Element {
         variant={'unstyled'}
         initial={false}
         animate={isOpen ? 'open' : 'closed'}
-        ref={containerRef}
         onClick={onToggle}
       >
         <svg width="27" height="23" viewBox="0 0 20 20">

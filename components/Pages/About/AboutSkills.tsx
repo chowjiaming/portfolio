@@ -11,6 +11,12 @@ export default function AboutSkills(): JSX.Element {
           lg: 'repeat(1, 1fr)',
           xl: 'repeat(2, 1fr)',
         }}
+        w={{
+          base: 'full',
+          lg: 'xl',
+          xl: '2xl',
+          '2xl': '3xl',
+        }}
         gap={STANDARD_MARGIN}
         mb={SECTION_SPACING}
       >

@@ -30,7 +30,6 @@ export default function ContactCard({
       target="_blank"
       direction={{base: 'column', sm: 'row'}}
       overflow="hidden"
-      variant="outline"
     >
       <Flex>
         <Flex align={'center'} ml={SECTION_PADDING}>

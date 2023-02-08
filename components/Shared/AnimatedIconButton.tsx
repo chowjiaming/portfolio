@@ -1,4 +1,4 @@
-import {IconButton, Tooltip, chakra, ColorProps} from '@chakra-ui/react';
+import {Icon, Tooltip, chakra, ColorProps} from '@chakra-ui/react';
 import {motion} from 'framer-motion';
 import type {Variants} from 'framer-motion';
 import type {IconType} from 'react-icons';
@@ -28,11 +28,10 @@ export default function AnimatedIconButton({
         display={'flex'}
         alignItems={'center'}
       >
-        <IconButton
+        <Icon
           as={icon}
           aria-label={label}
-          variant={'unstyled'}
-          size={'sm'}
+          boxSize={8}
           color={colour}
           onClick={onClick}
         />

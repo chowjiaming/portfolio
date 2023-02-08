@@ -1,10 +1,10 @@
 import {motion} from 'framer-motion';
-import {Button} from '@chakra-ui/react';
+import {Button, Icon} from '@chakra-ui/react';
 import {sidebarSettings} from '@/utils/settings';
-import Image from 'next/image';
+import type {IconType} from 'react-icons';
 
 export type NavButtonProps = {
-  icon: string;
+  icon: IconType;
   itemName: string;
   itemRoute: string;
   activeClass: 'active' | '';
@@ -24,16 +24,7 @@ export default function NavButton({
       href={itemRoute}
       variant={'sidebar'}
     >
-      <Image
-        src={`svg/${icon}.svg`}
-        alt={itemName}
-        width={20}
-        height={20}
-        style={{
-          width: 'auto',
-          height: 'auto',
-        }}
-      />
+      <Icon as={icon} boxSize={6} />
       {itemName}
     </Button>
   );

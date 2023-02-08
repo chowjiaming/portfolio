@@ -26,9 +26,9 @@ export default function Sidebar() {
           top={0}
           left={0}
           w={SIDEBAR_WIDTH}
-          h={'100vh'}
-          bg={'gray.200'}
+          h={'full'}
           zIndex={999}
+          _dark={{bg: 'gray.800'}}
         >
           <SidebarHeader />
           <SidebarBody />

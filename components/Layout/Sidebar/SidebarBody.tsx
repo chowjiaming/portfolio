@@ -6,7 +6,7 @@ import ScrollspyNav from 'react-scrollspy-nav';
 import NavButton from './NavButton';
 
 export default function SidebarBody(): JSX.Element {
-  const sections = ['home', 'about', 'portfolio', 'testimonial', 'contact'];
+  const sections = nav.map((n) => n.itemName.toLowerCase());
 
   return (
     <Flex
@@ -18,7 +18,6 @@ export default function SidebarBody(): JSX.Element {
       flex={'4'}
       h={'full'}
       w={'full'}
-      bg={'gray.300'}
       align={'center'}
       justify={'center'}
     >

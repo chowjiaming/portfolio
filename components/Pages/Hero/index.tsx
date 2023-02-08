@@ -30,7 +30,6 @@ export default function Hero(): JSX.Element {
         fontSize={{base: '3xl', md: '4xl', lg: '5xl'}}
         fontWeight="extrabold"
         textAlign="center"
-        color="gray.900"
         mt={STANDARD_MARGIN}
       >
         Hello, I&apos;m {content.name}
@@ -49,6 +48,12 @@ export default function Hero(): JSX.Element {
           loopCount={0}
           showCursor
           cursorChar="|"
+          style={{
+            whiteSpace: 'pre',
+            display: 'inline-block',
+            fontSize: '1.5rem',
+            fontWeight: 'bold',
+          }}
         />
       </Box>
       <Text

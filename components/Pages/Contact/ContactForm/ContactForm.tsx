@@ -55,7 +55,6 @@ export default function ContactForm(): JSX.Element {
       </VStack>
       <Button
         type="submit"
-        colorScheme="blue"
         size="lg"
         isLoading={isSubmitting}
         loadingText="Submitting..."
