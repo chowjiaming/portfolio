@@ -15,7 +15,7 @@ export default function SidebarBody(): JSX.Element {
       animate="open"
       exit="closed"
       variants={sidebarSettings.sideVariants}
-      flex={'4'}
+      flex={8}
       h={'full'}
       w={'full'}
       align={'center'}

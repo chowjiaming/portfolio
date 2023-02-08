@@ -1,6 +1,6 @@
 import {Flex, Heading} from '@chakra-ui/react';
 import {motion} from 'framer-motion';
-import {STANDARD_MARGIN} from '@/utils/constants';
+import {SECTION_PADDING} from '@/utils/constants';
 import {sidebarSettings} from '@/utils/settings';
 import ColorModeToggle from '@/components/Shared/ColorModeToggle';
 
@@ -15,13 +15,16 @@ export default function SidebarHeader(): JSX.Element {
       flex={'1'}
       h={'full'}
       w={'full'}
-      direction={'column'}
-      justify={'center'}
+      justify={'space-between'}
       align={'center'}
-      gap={STANDARD_MARGIN}
+      p={SECTION_PADDING}
     >
-      <Heading as={motion.h1} variants={sidebarSettings.itemVariants}>
-        Joseph Chow
+      <Heading
+        as={motion.h1}
+        variants={sidebarSettings.itemVariants}
+        noOfLines={0}
+      >
+        Joseph <br /> Chow
       </Heading>
       <ColorModeToggle />
     </Flex>

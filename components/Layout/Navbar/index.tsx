@@ -19,7 +19,9 @@ export default function Navbar(): JSX.Element {
       pl={SECTION_PADDING}
       pr={STANDARD_MARGIN}
       h={NAVBAR_HEIGHT}
-      bg={'gray.200'}
+      _dark={{
+        bg: 'gray.800',
+      }}
       zIndex={2}
     >
       <Heading as={'h1'}>Joseph</Heading>

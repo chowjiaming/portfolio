@@ -12,7 +12,7 @@ export default function SidebarFooter(): JSX.Element {
       animate="open"
       exit="closed"
       variants={sidebarSettings.sideVariants}
-      flex={'1'}
+      flex={2}
       h={'full'}
       w={'full'}
       align={'center'}
