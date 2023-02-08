@@ -5,19 +5,20 @@ import {RefAttributes} from 'react';
 import ColorModeToggle from '@/components/Shared/ColorModeToggle';
 import {STANDARD_MARGIN} from '@/utils/constants';
 
-const Path = (
-  props: JSX.IntrinsicAttributes &
-    SVGMotionProps<SVGPathElement> &
-    RefAttributes<SVGPathElement> & {
-      isDarkMode: boolean;
-    }
-) => (
+const Path = ({
+  isDarkMode,
+  ...restProps
+}: JSX.IntrinsicAttributes &
+  SVGMotionProps<SVGPathElement> &
+  RefAttributes<SVGPathElement> & {
+    isDarkMode: boolean;
+  }) => (
   <motion.path
     fill="transparent"
     strokeWidth="3"
-    stroke={props.isDarkMode ? 'hsl(360, 100%, 100%)' : 'hsl(0, 0%, 18%)'}
+    stroke={isDarkMode ? 'hsl(360, 100%, 100%)' : 'hsl(0, 0%, 18%)'}
     strokeLinecap="round"
-    {...props}
+    {...restProps}
   />
 );
 
