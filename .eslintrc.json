@@ -1,7 +1,7 @@
 {
   "env": {
     "browser": true,
-    "es2020": true
+    "es2021": true
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -19,6 +19,12 @@
     "prettier",
     "next/core-web-vitals"
   ],
+  "rules": {
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "single"],
+    "semi": ["error", "always"],
+    "react/react-in-jsx-scope": "off"
+  },
   "settings": {
     "react": {
       "version": "detect"
