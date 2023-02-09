@@ -1,10 +1,10 @@
 import {SECTION_PADDING} from '@/utils/constants';
-import {Box, Flex, Tooltip, chakra, shouldForwardProp} from '@chakra-ui/react';
+import {Flex} from '@chakra-ui/react';
 import {sliderSettings} from '@/utils/settings';
 import {intro, content} from '@/data/portfolio';
 import Slider from 'react-slick';
-import Image from 'next/image';
 import SectionHeader from '@/components/Shared/SectionHeader';
+import Project from './Project';
 
 export default function Portfolio(): JSX.Element {
   return (
@@ -18,36 +18,9 @@ export default function Portfolio(): JSX.Element {
       <SectionHeader heading={intro.heading} paragraph={intro.paragraph} />
       <Slider {...sliderSettings}>
         {content.map((item) => (
-          <Box key={item.name} w="full" h="full" p={SECTION_PADDING}>
-            <Tooltip label={item.name} aria-label={item.name}>
-              <PortfolioImage
-                src={item.screenshot}
-                alt={item.name}
-                width={1920}
-                height={926}
-                css={{
-                  height: 'auto',
-                  width: 'auto',
-                }}
-              />
-            </Tooltip>
-          </Box>
+          <Project key={item.name} {...item} />
         ))}
       </Slider>
     </Flex>
   );
 }
-
-const PortfolioImage = chakra(Image, {
-  shouldForwardProp: (prop) =>
-    shouldForwardProp(prop) ||
-    prop === 'width' ||
-    prop === 'height' ||
-    prop === 'alt',
-  baseStyle: {
-    _hover: {
-      transform: 'scale(1.1)',
-      transition: 'all 0.3s ease-in-out',
-    },
-  },
-});
