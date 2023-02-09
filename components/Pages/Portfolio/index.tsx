@@ -18,13 +18,13 @@ export default function Portfolio(): JSX.Element {
       <SectionHeader heading={intro.heading} paragraph={intro.paragraph} />
       <Slider {...sliderSettings}>
         {content.map((item) => (
-          <Box key={item.title} w="full" h="full" p={SECTION_PADDING}>
-            <Tooltip label={item.title} aria-label={item.title}>
+          <Box key={item.name} w="full" h="full" p={SECTION_PADDING}>
+            <Tooltip label={item.name} aria-label={item.name}>
               <PortfolioImage
-                src={item.image}
-                alt={item.title}
-                width={1000}
-                height={1000}
+                src={item.screenshot}
+                alt={item.name}
+                width={1920}
+                height={926}
                 css={{
                   height: 'auto',
                   width: 'auto',
