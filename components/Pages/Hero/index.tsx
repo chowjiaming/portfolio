@@ -34,6 +34,10 @@ export default function Hero(): JSX.Element {
           alt="Profile picture"
           width={400}
           height={400}
+          style={{
+            width: 'auto',
+            height: 'auto',
+          }}
         />
       </HeroImage>
       <Heading
