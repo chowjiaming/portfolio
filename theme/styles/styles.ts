@@ -1,10 +1,9 @@
-import {ThemeConfig} from '@chakra-ui/react';
+import type {ThemeConfig} from '@chakra-ui/react';
 
 export const colours = {};
 export const fonts = {
   body: 'system-ui, sans-serif',
   heading: 'system-ui, sans-serif',
-  mono: 'SFMono-Regular, Consolas, "Liberation Mono", Menlo, Courier, monospace',
 };
 export const config: ThemeConfig = {
   initialColorMode: 'system',
