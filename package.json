@@ -16,15 +16,7 @@
     }
   },
   "lint-staged": {
-    "pages/**/*.{ts,tsx}": [
-      "yarn lint"
-    ],
-    "components/**/*.{ts,tsx}": [
-      "yarn lint"
-    ],
-    "data/**/*.{ts,tsx}": [
-      "yarn lint"
-    ]
+    "*.{json,md,html,css,ts,tsx}": "yarn lint"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.5.1",
