@@ -3,7 +3,7 @@ import {motion} from 'framer-motion';
 import {nav} from '@/data/sidebar';
 import {sidebarSettings} from '@/utils/settings';
 import ScrollspyNav from 'react-scrollspy-nav';
-import NavButton from './NavButton';
+import NavButton from '@/Layout/Sidebar/NavButton';
 
 export default function SidebarBody(): JSX.Element {
   const sections = nav.map((n) => n.itemName.toLowerCase());

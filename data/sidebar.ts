@@ -1,4 +1,4 @@
-import {NavButtonProps} from '@/components/Layout/Sidebar/NavButton';
+import {NavButtonProps} from '@/Layout/Sidebar/NavButton';
 import {SlNotebook} from 'react-icons/sl';
 import {FaRegCommentDots} from 'react-icons/fa';
 import {MdOutlineContactMail} from 'react-icons/md';
