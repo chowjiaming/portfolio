@@ -7,7 +7,7 @@ import {contactValidationSchema} from '@/utils/validations';
 import ContactFormInput from './ContactFormInput';
 import {STANDARD_MARGIN} from '@/utils/constants';
 
-export default function ContactForm(): JSX.Element {
+export function ContactForm(): JSX.Element {
   const toast = useToast();
   const {
     register,
@@ -64,3 +64,5 @@ export default function ContactForm(): JSX.Element {
     </form>
   );
 }
+
+ContactForm.displayName = 'ContactForm';

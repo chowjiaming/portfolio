@@ -17,7 +17,7 @@ type ContactInfoProps = {
   icon: IconType;
   link: string;
 };
-export default function ContactCard({
+export function ContactCard({
   heading,
   value,
   icon,
@@ -45,3 +45,5 @@ export default function ContactCard({
     </Card>
   );
 }
+
+ContactCard.displayName = 'ContactCard';

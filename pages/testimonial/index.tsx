@@ -3,30 +3,40 @@ import {Box, Flex, chakra, shouldForwardProp} from '@chakra-ui/react';
 import {sliderSettings} from '@/utils/settings';
 import {intro, content} from '@/data/testimonial';
 import {SectionHeader} from '@/components/Shared/SectionHeader';
+import {Meta} from '@/components/Meta';
 import Slider from 'react-slick';
 import Image from 'next/image';
 
 export default function Testimonial(): JSX.Element {
   return (
-    <Flex as="section" p={SECTION_PADDING} direction="column" minH="100vh">
-      <SectionHeader heading={intro.heading} paragraph={intro.paragraph} />
-      <Slider {...sliderSettings}>
-        {content.map((item) => (
-          <Box key={item.name} w="full" h="full" p={SECTION_PADDING}>
-            <TestimonialImage
-              src={item.image}
-              alt={item.name}
-              width={1000}
-              height={1000}
-              css={{
-                height: 'auto',
-                width: 'auto',
-              }}
-            />
-          </Box>
-        ))}
-      </Slider>
-    </Flex>
+    <>
+      <Meta page="Testimonial" />
+      <Flex
+        as="section"
+        role="contentinfo"
+        p={SECTION_PADDING}
+        direction="column"
+        minH="100vh"
+      >
+        <SectionHeader heading={intro.heading} paragraph={intro.paragraph} />
+        <Slider {...sliderSettings}>
+          {content.map((item) => (
+            <Box key={item.name} w="full" h="full" p={SECTION_PADDING}>
+              <TestimonialImage
+                src={item.image}
+                alt={item.name}
+                width={1000}
+                height={1000}
+                css={{
+                  height: 'auto',
+                  width: 'auto',
+                }}
+              />
+            </Box>
+          ))}
+        </Slider>
+      </Flex>
+    </>
   );
 }
 

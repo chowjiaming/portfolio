@@ -8,13 +8,13 @@ import {
   Divider,
   HStack,
 } from '@chakra-ui/react';
+import {Fragment} from 'react';
 import {content, social} from '@/data/hero';
 import {SECTION_PADDING, STANDARD_MARGIN} from '@/utils/constants';
+import {SocialIcon} from '@/components/Hero/SocialIcon';
+import {Meta} from '@/components/Meta';
 import Image from 'next/image';
 import ReactTyped from 'react-typed';
-import SocialIcon from '@/components/Hero/SocialIcon';
-import {Fragment} from 'react';
-import Seo from '@/components/Seo';
 
 const HeroImage = chakra(Box, {
   baseStyle: {
@@ -26,11 +26,10 @@ const HeroImage = chakra(Box, {
 export default function Home(): JSX.Element {
   return (
     <>
-      <Seo pageTitle="Portfolio" />
-
+      <Meta page="Home" />
       <VStack
-        id={'home'}
         as="section"
+        role="contentinfo"
         justify="center"
         align="center"
         direction="column"

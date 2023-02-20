@@ -5,9 +5,9 @@ import {NAVBAR_HEIGHT, SIDEBAR_WIDTH} from '@/utils/constants';
 export function Main(props: FlexProps): JSX.Element {
   return (
     <Flex
-      as={'main'}
-      direction={'column'}
-      w={'full'}
+      as="main"
+      role="main"
+      direction="column"
       pl={{
         base: 0,
         lg: SIDEBAR_WIDTH,
