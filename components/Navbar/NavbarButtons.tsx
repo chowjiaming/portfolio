@@ -2,7 +2,7 @@ import {Button, ButtonGroup, useColorMode} from '@chakra-ui/react';
 import {motion, SVGMotionProps} from 'framer-motion';
 import {useSidebar} from '@/context/SidebarContext';
 import {RefAttributes} from 'react';
-import ColorModeToggle from '@/components/Shared/ColorModeToggle';
+import {ColorModeToggle} from '@/components/Shared/ColorModeToggle';
 import {STANDARD_MARGIN} from '@/utils/constants';
 
 const Path = ({
@@ -22,7 +22,7 @@ const Path = ({
   />
 );
 
-export default function NavbarButtons(): JSX.Element {
+export function NavbarButtons(): JSX.Element {
   const {isOpen, onToggle} = useSidebar();
   const {colorMode} = useColorMode();
   const isDarkMode = colorMode === 'dark';
@@ -66,3 +66,5 @@ export default function NavbarButtons(): JSX.Element {
     </ButtonGroup>
   );
 }
+
+NavbarButtons.displayName = 'NavbarButtons';

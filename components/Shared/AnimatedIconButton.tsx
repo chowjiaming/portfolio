@@ -3,6 +3,8 @@ import {motion} from 'framer-motion';
 import type {Variants} from 'framer-motion';
 import type {IconType} from 'react-icons';
 
+const MotionButton = chakra(motion.button);
+
 type AnimatedIconProps = {
   icon: IconType;
   label: string;
@@ -10,7 +12,7 @@ type AnimatedIconProps = {
   variants: Variants;
   onClick: () => void;
 };
-export default function AnimatedIconButton({
+export function AnimatedIconButton({
   icon,
   label,
   colour,
@@ -40,4 +42,4 @@ export default function AnimatedIconButton({
   );
 }
 
-const MotionButton = chakra(motion.button);
+AnimatedIconButton.displayName = 'AnimatedIconButton';

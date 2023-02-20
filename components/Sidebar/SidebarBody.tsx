@@ -3,9 +3,9 @@ import {motion} from 'framer-motion';
 import {nav} from '@/data/sidebar';
 import {sidebarSettings} from '@/utils/settings';
 import ScrollspyNav from 'react-scrollspy-nav';
-import NavButton from '@/Layout/Sidebar/NavButton';
+import {SidebarNavButton} from '@/components/Sidebar/SidebarNavButton';
 
-export default function SidebarBody(): JSX.Element {
+export function SidebarBody(): JSX.Element {
   const sections = nav.map((n) => n.itemName.toLowerCase());
 
   return (
@@ -28,10 +28,12 @@ export default function SidebarBody(): JSX.Element {
       >
         <VStack spacing={8} align="stretch">
           {nav.map((main) => (
-            <NavButton key={main.itemRoute} {...main} />
+            <SidebarNavButton key={main.itemRoute} {...main} />
           ))}
         </VStack>
       </ScrollspyNav>
     </Flex>
   );
 }
+
+SidebarBody.displayName = 'SidebarBody';

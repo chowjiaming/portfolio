@@ -3,9 +3,9 @@ import {Box} from '@chakra-ui/react';
 import {useSize} from '@chakra-ui/react-use-size';
 import {useRef, useEffect} from 'react';
 import {useSidebar} from '@/context/SidebarContext';
-import Navbar from '@/Layout/Navbar';
-import Sidebar from '@/Layout/Sidebar';
-import Main from '@/Layout/Main';
+import {Navbar} from '@/Layout/Navbar';
+import {Sidebar} from '@/Layout/Sidebar';
+import {Main} from '@/Layout/Main';
 
 export default function Layout(props: BoxProps): JSX.Element {
   const elementRef = useRef(null);

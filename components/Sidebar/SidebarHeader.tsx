@@ -2,9 +2,9 @@ import {Flex, Heading} from '@chakra-ui/react';
 import {motion} from 'framer-motion';
 import {SECTION_PADDING} from '@/utils/constants';
 import {sidebarSettings} from '@/utils/settings';
-import ColorModeToggle from '@/components/Shared/ColorModeToggle';
+import {ColorModeToggle} from '@/components/Shared/ColorModeToggle';
 
-export default function SidebarHeader(): JSX.Element {
+export function SidebarHeader(): JSX.Element {
   return (
     <Flex
       as={motion.div}

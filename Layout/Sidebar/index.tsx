@@ -2,11 +2,11 @@ import {Flex} from '@chakra-ui/react';
 import {AnimatePresence, motion} from 'framer-motion';
 import {SIDEBAR_WIDTH} from '@/utils/constants';
 import {useSidebar} from '@/context/SidebarContext';
-import SidebarHeader from '@/Layout/Sidebar/SidebarHeader';
-import SidebarBody from '@/Layout/Sidebar/SidebarBody';
-import SidebarFooter from '@/Layout/Sidebar/SidebarFooter';
+import {SidebarHeader} from '@/components/Sidebar/SidebarHeader';
+import {SidebarBody} from '@/components/Sidebar/SidebarBody';
+import {SidebarFooter} from '@/components/Sidebar/SidebarFooter';
 
-export default function Sidebar(): JSX.Element {
+export function Sidebar(): JSX.Element {
   const {isOpen} = useSidebar();
   return (
     <AnimatePresence>
@@ -38,3 +38,5 @@ export default function Sidebar(): JSX.Element {
     </AnimatePresence>
   );
 }
+
+Sidebar.displayName = 'Sidebar';

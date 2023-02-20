@@ -2,7 +2,7 @@ import type {FlexProps} from '@chakra-ui/react';
 import {Flex} from '@chakra-ui/react';
 import {NAVBAR_HEIGHT, SIDEBAR_WIDTH} from '@/utils/constants';
 
-export default function Main(props: FlexProps): JSX.Element {
+export function Main(props: FlexProps): JSX.Element {
   return (
     <Flex
       as={'main'}
@@ -22,3 +22,5 @@ export default function Main(props: FlexProps): JSX.Element {
     </Flex>
   );
 }
+
+Main.displayName = 'Main';

@@ -4,9 +4,9 @@ import {
   SECTION_PADDING,
   STANDARD_MARGIN,
 } from '@/utils/constants';
-import NavbarButtons from './NavbarButtons';
+import {NavbarButtons} from '@/components/Navbar/NavbarButtons';
 
-export default function Navbar(): JSX.Element {
+export function Navbar(): JSX.Element {
   return (
     <Flex
       as={'nav'}
@@ -30,3 +30,5 @@ export default function Navbar(): JSX.Element {
     </Flex>
   );
 }
+
+Navbar.displayName = 'Navbar';

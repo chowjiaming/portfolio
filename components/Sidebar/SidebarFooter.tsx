@@ -4,7 +4,7 @@ import {footer} from '@/data/sidebar';
 import {STANDARD_MARGIN} from '@/utils/constants';
 import {sidebarSettings} from '@/utils/settings';
 
-export default function SidebarFooter(): JSX.Element {
+export function SidebarFooter(): JSX.Element {
   return (
     <Flex
       as={motion.footer}
@@ -42,3 +42,5 @@ export default function SidebarFooter(): JSX.Element {
     </Flex>
   );
 }
+
+SidebarFooter.displayName = 'SidebarFooter';

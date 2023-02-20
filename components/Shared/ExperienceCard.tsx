@@ -6,7 +6,7 @@ export type ExperienceCardProps = {
   tenure: string;
   description: string;
 };
-export default function ExperienceCard({
+export function ExperienceCard({
   position,
   company,
   tenure,
@@ -42,3 +42,5 @@ export default function ExperienceCard({
     </Card>
   );
 }
+
+ExperienceCard.displayName = 'ExperienceCard';

@@ -7,7 +7,7 @@ type SectionHeaderProps = {
   marginTop?: number;
   marginBottom?: number;
 };
-export default function SectionHeader({
+export function SectionHeader({
   heading,
   paragraph,
   marginTop,
@@ -33,3 +33,5 @@ export default function SectionHeader({
     </Box>
   );
 }
+
+SectionHeader.displayName = 'SectionHeader';

@@ -2,7 +2,7 @@ import {Grid, GridItem, Heading, Progress} from '@chakra-ui/react';
 import {content} from '@/data/skills';
 import {SECTION_SPACING, STANDARD_MARGIN} from '@/utils/constants';
 
-export default function AboutSkills(): JSX.Element {
+export function AboutSkills(): JSX.Element {
   return (
     <Grid
       templateColumns={{
@@ -32,3 +32,5 @@ export default function AboutSkills(): JSX.Element {
     </Grid>
   );
 }
+
+AboutSkills.displayName = 'AboutSkills';

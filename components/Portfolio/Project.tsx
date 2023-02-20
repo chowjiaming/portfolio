@@ -19,13 +19,27 @@ import {
 } from '@chakra-ui/react';
 import Image from 'next/image';
 
+const PortfolioImage = chakra(Image, {
+  shouldForwardProp: (prop) =>
+    shouldForwardProp(prop) ||
+    prop === 'width' ||
+    prop === 'height' ||
+    prop === 'alt',
+  baseStyle: {
+    _hover: {
+      transform: 'scale(1.1)',
+      transition: 'all 0.3s ease-in-out',
+    },
+  },
+});
+
 type ProjectProps = {
   name: string;
   screenshot: string;
   shortDesc: string;
   longDesc: string;
 };
-export default function Project({
+export function Project({
   name,
   screenshot,
   shortDesc,
@@ -122,16 +136,4 @@ export default function Project({
   );
 }
 
-const PortfolioImage = chakra(Image, {
-  shouldForwardProp: (prop) =>
-    shouldForwardProp(prop) ||
-    prop === 'width' ||
-    prop === 'height' ||
-    prop === 'alt',
-  baseStyle: {
-    _hover: {
-      transform: 'scale(1.1)',
-      transition: 'all 0.3s ease-in-out',
-    },
-  },
-});
+Project.displayName = 'Project';

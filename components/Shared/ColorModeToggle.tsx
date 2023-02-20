@@ -2,9 +2,9 @@ import {Flex, useColorMode} from '@chakra-ui/react';
 import {FaSun, FaMoon} from 'react-icons/fa';
 import {AnimatePresence, motion} from 'framer-motion';
 import {enterExitSpin, sidebarSettings} from '@/utils/settings';
-import AnimatedIconButton from './AnimatedIconButton';
+import {AnimatedIconButton} from '@/components/Shared/AnimatedIconButton';
 
-export default function ColorModeToggle(): JSX.Element {
+export function ColorModeToggle(): JSX.Element {
   const {colorMode, toggleColorMode} = useColorMode();
   const isDarkMode = colorMode === 'dark';
 
@@ -36,3 +36,5 @@ export default function ColorModeToggle(): JSX.Element {
     </Flex>
   );
 }
+
+ColorModeToggle.displayName = 'ColorModeToggle';

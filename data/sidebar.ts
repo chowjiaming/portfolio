@@ -1,4 +1,4 @@
-import {NavButtonProps} from '@/Layout/Sidebar/NavButton';
+import type {NavButtonProps} from '@/components/Sidebar/SidebarNavButton';
 import {SlNotebook} from 'react-icons/sl';
 import {FaRegCommentDots} from 'react-icons/fa';
 import {MdOutlineContactMail} from 'react-icons/md';
@@ -9,31 +9,31 @@ export const nav: NavButtonProps[] = [
   {
     icon: AiOutlineHome,
     itemName: 'Home',
-    itemRoute: '#home',
+    itemRoute: '/',
     activeClass: 'active',
   },
   {
     icon: BsFillPersonLinesFill,
     itemName: 'About',
-    itemRoute: '#about',
+    itemRoute: '/about',
     activeClass: '',
   },
   {
     icon: SlNotebook,
     itemName: 'Portfolio',
-    itemRoute: '#portfolio',
+    itemRoute: '/portfolio',
     activeClass: '',
   },
   {
     icon: FaRegCommentDots,
     itemName: 'Testimonial',
-    itemRoute: '#testimonial',
+    itemRoute: '/testimonial',
     activeClass: '',
   },
   {
     icon: MdOutlineContactMail,
     itemName: 'Contact',
-    itemRoute: '#contact',
+    itemRoute: '/contact',
     activeClass: '',
   },
 ];
