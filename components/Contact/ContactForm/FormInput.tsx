@@ -1,7 +1,7 @@
 import {Input, Textarea} from '@chakra-ui/react';
 import {FormControl, FormErrorMessage, FormLabel} from '@chakra-ui/react';
-import {ContactFormTypes} from '@/utils/types';
-import {UseFormRegister} from 'react-hook-form';
+import {type ContactFormTypes} from '@/utils/types';
+import {type UseFormRegister} from 'react-hook-form';
 
 type ContactInputProps = {
   name: keyof ContactFormTypes;
@@ -10,8 +10,7 @@ type ContactInputProps = {
   isTextArea?: boolean;
   error?: string;
 };
-
-export default function FormInput({
+export function FormInput({
   name,
   label,
   register,
@@ -30,3 +29,5 @@ export default function FormInput({
     </FormControl>
   );
 }
+
+FormInput.displayName = 'FormInput';

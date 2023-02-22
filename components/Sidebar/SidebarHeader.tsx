@@ -12,11 +12,11 @@ export function SidebarHeader(): JSX.Element {
       animate="open"
       exit="closed"
       variants={sidebarSettings.sideVariants}
-      flex={'1'}
-      h={'full'}
-      w={'full'}
-      justify={'space-between'}
-      align={'center'}
+      flex="1"
+      h="full"
+      w="full"
+      justify="space-between"
+      align="center"
       p={SECTION_PADDING}
     >
       <Heading

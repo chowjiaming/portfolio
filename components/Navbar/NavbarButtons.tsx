@@ -1,7 +1,7 @@
 import {Button, ButtonGroup, useColorMode} from '@chakra-ui/react';
-import {motion, SVGMotionProps} from 'framer-motion';
+import {motion, type SVGMotionProps} from 'framer-motion';
 import {useSidebar} from '@/context/SidebarContext';
-import {RefAttributes} from 'react';
+import {type RefAttributes} from 'react';
 import {ColorModeToggle} from '@/components/Shared/ColorModeToggle';
 import {STANDARD_MARGIN} from '@/utils/constants';
 

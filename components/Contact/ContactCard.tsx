@@ -8,7 +8,7 @@ import {
   Stack,
   Text,
 } from '@chakra-ui/react';
-import type {IconType} from 'react-icons';
+import {type IconType} from 'react-icons';
 import {SECTION_PADDING} from '@/utils/constants';
 
 type ContactInfoProps = {

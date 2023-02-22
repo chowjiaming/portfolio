@@ -1,4 +1,4 @@
-import type {IconType} from 'react-icons';
+import {type IconType} from 'react-icons';
 import {Icon, Link, Tooltip, VisuallyHidden} from '@chakra-ui/react';
 
 export type SocialIconProps = {

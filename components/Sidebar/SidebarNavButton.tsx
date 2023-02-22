@@ -1,4 +1,4 @@
-import type {IconType} from 'react-icons';
+import {type IconType} from 'react-icons';
 import {motion} from 'framer-motion';
 import {Button, Icon} from '@chakra-ui/react';
 import {sidebarSettings} from '@/utils/settings';

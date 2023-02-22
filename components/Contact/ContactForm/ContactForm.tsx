@@ -1,10 +1,10 @@
 import {Button, VStack, useToast} from '@chakra-ui/react';
-// import { useState } from "react";
-import {ContactFormTypes} from '@/utils/types';
+import {type SyntheticEvent} from 'react';
+import {type ContactFormTypes} from '@/utils/types';
 import {useForm} from 'react-hook-form';
 import {yupResolver} from '@hookform/resolvers/yup';
 import {contactValidationSchema} from '@/utils/validations';
-import ContactFormInput from './ContactFormInput';
+import {FormInput} from '@/components/Contact/ContactForm/FormInput';
 import {STANDARD_MARGIN} from '@/utils/constants';
 
 export function ContactForm(): JSX.Element {
@@ -17,7 +17,17 @@ export function ContactForm(): JSX.Element {
   } = useForm<ContactFormTypes>({
     resolver: yupResolver(contactValidationSchema),
   });
-  const onSubmit = async (data: ContactFormTypes) => {
+  function onPromise<T>(promise: (event: SyntheticEvent) => Promise<T>) {
+    return (event: SyntheticEvent) => {
+      if (promise) {
+        promise(event).catch((error) => {
+          console.log('Unexpected error', error);
+        });
+      }
+    };
+  }
+
+  const onSubmit = handleSubmit(async (data: ContactFormTypes) => {
     // placeholder for API call
     console.log('submitting', data);
     await new Promise((resolve) => setTimeout(resolve, 1000));
@@ -28,24 +38,24 @@ export function ContactForm(): JSX.Element {
       isClosable: true,
     });
     reset();
-  };
+  });
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)}>
+    <form onSubmit={onPromise(onSubmit)}>
       <VStack spacing={STANDARD_MARGIN} mb={STANDARD_MARGIN}>
-        <ContactFormInput
+        <FormInput
           name="name"
           label="Name"
           register={register}
           error={errors.name?.message}
         />
-        <ContactFormInput
+        <FormInput
           name="email"
           label="Email"
           register={register}
           error={errors.email?.message}
         />
-        <ContactFormInput
+        <FormInput
           name="message"
           label="Message"
           register={register}

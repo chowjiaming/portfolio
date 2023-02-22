@@ -12,18 +12,18 @@ export function SidebarFooter(): JSX.Element {
       animate="open"
       exit="closed"
       variants={sidebarSettings.sideVariants}
-      flex={2}
-      h={'full'}
-      w={'full'}
-      align={'center'}
-      justify={'center'}
+      flex="2"
+      h="full"
+      w="full"
+      align="center"
+      justify="center"
     >
       <Flex align={'center'}>
         <Avatar
           as={motion.span}
           variants={sidebarSettings.itemVariants}
           name={footer.name}
-          src={'/img/avatar.jpg'}
+          src="/img/avatar.jpg"
           size="lg"
         />
         <Flex flexDir={'column'} ml={STANDARD_MARGIN}>
