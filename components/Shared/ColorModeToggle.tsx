@@ -12,7 +12,7 @@ export function ColorModeToggle(): JSX.Element {
     <Flex
       as={motion.div}
       variants={sidebarSettings.itemVariants}
-      align={'center'}
+      align="center"
     >
       <AnimatePresence>
         {isDarkMode ? (

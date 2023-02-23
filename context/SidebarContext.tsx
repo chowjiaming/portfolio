@@ -1,37 +1,20 @@
+import {type UseDisclosureReturn} from '@chakra-ui/react';
 import {createContext, useContext} from 'react';
-import {useDisclosure} from '@chakra-ui/react';
 
-type SidebarContextType = {
-  isOpen: boolean;
-  onOpen: () => void;
-  onClose: () => void;
-  onToggle: () => void;
+type WindowSize = {
+  width: number;
+  height: number;
 };
+export const SidebarContext = createContext<
+  (UseDisclosureReturn & WindowSize) | null
+>(null);
 
-const SidebarContextDefaultValues: SidebarContextType = {
-  isOpen: false,
-  onOpen: () => null,
-  onClose: () => null,
-  onToggle: () => null,
-};
+export function useSidebar(): UseDisclosureReturn & WindowSize {
+  const sidebarCtx = useContext(SidebarContext);
 
-export const SidebarContext = createContext<SidebarContextType>(
-  SidebarContextDefaultValues
-);
+  if (sidebarCtx === null) {
+    throw new Error('useSidebar must be used within a SidebarContextProvider');
+  }
 
-export function useSidebar(): SidebarContextType {
-  return useContext(SidebarContext);
-}
-
-type SidebarProviderProps = {
-  children: React.ReactNode;
-};
-export function SidebarProvider({children}: SidebarProviderProps): JSX.Element {
-  const {isOpen, onOpen, onClose, onToggle} = useDisclosure();
-
-  return (
-    <SidebarContext.Provider value={{isOpen, onOpen, onClose, onToggle}}>
-      {children}
-    </SidebarContext.Provider>
-  );
+  return sidebarCtx;
 }

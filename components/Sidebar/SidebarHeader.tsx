@@ -3,8 +3,12 @@ import {motion} from 'framer-motion';
 import {SECTION_PADDING} from '@/utils/constants';
 import {sidebarSettings} from '@/utils/settings';
 import {ColorModeToggle} from '@/components/Shared/ColorModeToggle';
+import {useSidebar} from '@/context/SidebarContext';
+import {useRouter} from 'next/navigation';
 
 export function SidebarHeader(): JSX.Element {
+  const router = useRouter();
+  const {width} = useSidebar();
   return (
     <Flex
       as={motion.div}
@@ -22,11 +26,14 @@ export function SidebarHeader(): JSX.Element {
       <Heading
         as={motion.h1}
         variants={sidebarSettings.itemVariants}
-        noOfLines={0}
+        cursor="pointer"
+        onClick={() => router.push('/')}
       >
         Joseph <br /> Chow
       </Heading>
-      <ColorModeToggle />
+      {width > 992 && <ColorModeToggle />}
     </Flex>
   );
 }
+
+SidebarHeader.displayName = 'SidebarHeader';

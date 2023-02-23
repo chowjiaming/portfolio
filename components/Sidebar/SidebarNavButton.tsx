@@ -26,7 +26,7 @@ export function SidebarNavButton({
       variant="sidebar"
       onClick={() => router.push(itemRoute)}
     >
-      <Icon as={icon} boxSize={6} />
+      <Icon as={icon} boxSize="6" />
       {itemName}
     </Button>
   );

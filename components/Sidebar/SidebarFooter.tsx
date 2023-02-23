@@ -18,7 +18,7 @@ export function SidebarFooter(): JSX.Element {
       align="center"
       justify="center"
     >
-      <Flex align={'center'}>
+      <Flex align="center">
         <Avatar
           as={motion.span}
           variants={sidebarSettings.itemVariants}
@@ -26,7 +26,7 @@ export function SidebarFooter(): JSX.Element {
           src="/img/avatar.jpg"
           size="lg"
         />
-        <Flex flexDir={'column'} ml={STANDARD_MARGIN}>
+        <Flex flexDir="column" ml={STANDARD_MARGIN}>
           <Heading as={motion.h3} variants={sidebarSettings.itemVariants}>
             {footer.name}
           </Heading>
