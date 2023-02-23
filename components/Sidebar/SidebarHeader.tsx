@@ -1,6 +1,6 @@
 import {Flex, Heading} from '@chakra-ui/react';
 import {motion} from 'framer-motion';
-import {SECTION_PADDING} from '@/utils/constants';
+import {LG_SCREEN_WIDTH, SECTION_PADDING} from '@/utils/constants';
 import {sidebarSettings} from '@/utils/settings';
 import {ColorModeToggle} from '@/components/Shared/ColorModeToggle';
 import {useSidebar} from '@/context/SidebarContext';
@@ -31,7 +31,7 @@ export function SidebarHeader(): JSX.Element {
       >
         Joseph <br /> Chow
       </Heading>
-      {width > 992 && <ColorModeToggle />}
+      {width > LG_SCREEN_WIDTH && <ColorModeToggle />}
     </Flex>
   );
 }

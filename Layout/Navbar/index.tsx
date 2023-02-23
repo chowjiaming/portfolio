@@ -23,6 +23,7 @@ export function Navbar(): JSX.Element {
       pl={SECTION_PADDING}
       pr={STANDARD_MARGIN}
       h={NAVBAR_HEIGHT}
+      _dark={{bg: 'gray.800'}}
       zIndex="999"
     >
       <Heading

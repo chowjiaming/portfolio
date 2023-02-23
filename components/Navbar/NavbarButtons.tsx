@@ -32,7 +32,7 @@ export function NavbarButtons(): JSX.Element {
       <ColorModeToggle />
       <Button
         as={motion.button}
-        variant={'unstyled'}
+        variant="unstyled"
         initial={false}
         animate={isOpen ? 'open' : 'closed'}
         onClick={onToggle}
