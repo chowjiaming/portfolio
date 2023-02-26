@@ -1,5 +1,4 @@
-import type {FlexProps} from '@chakra-ui/react';
-import {Flex} from '@chakra-ui/react';
+import {Flex, type FlexProps} from '@chakra-ui/react';
 import {NAVBAR_HEIGHT, SIDEBAR_WIDTH} from '@/utils/constants';
 
 export function Main(props: FlexProps): JSX.Element {

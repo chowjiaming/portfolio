@@ -1,4 +1,4 @@
-import type {ThemeConfig} from '@chakra-ui/react';
+import {type ThemeConfig} from '@chakra-ui/react';
 
 export const colours = {};
 export const fonts = {

@@ -3,7 +3,7 @@ import {motion} from 'framer-motion';
 import {nav} from '@/data/sidebar';
 import {sidebarSettings} from '@/utils/settings';
 import {SidebarNavButton} from '@/components/Sidebar/SidebarNavButton';
-import {SECTION_PADDING} from '@/utils/constants';
+import {LARGE_MARGIN, SECTION_PADDING} from '@/utils/constants';
 
 export function SidebarBody(): JSX.Element {
   return (
@@ -19,7 +19,13 @@ export function SidebarBody(): JSX.Element {
       align="center"
       justify="center"
     >
-      <VStack spacing={SECTION_PADDING} align="stretch">
+      <VStack
+        spacing={{
+          base: LARGE_MARGIN,
+          lg: SECTION_PADDING,
+        }}
+        align="stretch"
+      >
         {nav.map((main) => (
           <SidebarNavButton key={main.itemRoute} {...main} />
         ))}

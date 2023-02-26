@@ -1,4 +1,4 @@
-import type {NavButtonProps} from '@/components/Sidebar/SidebarNavButton';
+import {type NavButtonProps} from '@/components/Sidebar/SidebarNavButton';
 import {SlNotebook} from 'react-icons/sl';
 import {FaRegCommentDots} from 'react-icons/fa';
 import {MdOutlineContactMail} from 'react-icons/md';

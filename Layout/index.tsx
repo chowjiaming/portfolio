@@ -1,29 +1,26 @@
-import type {BoxProps} from '@chakra-ui/react';
-import {Box} from '@chakra-ui/react';
+import {Box, type BoxProps, useDisclosure} from '@chakra-ui/react';
 import {useSize} from '@chakra-ui/react-use-size';
-import {useRef, useEffect} from 'react';
-import {useSidebar} from '@/context/SidebarContext';
+import {useRef} from 'react';
+import {SidebarContext} from '@/context/SidebarContext';
 import {Navbar} from '@/Layout/Navbar';
 import {Sidebar} from '@/Layout/Sidebar';
 import {Main} from '@/Layout/Main';
 
-export default function Layout(props: BoxProps): JSX.Element {
+export function Layout(props: BoxProps): JSX.Element {
+  const sidebarDisclosure = useDisclosure();
   const elementRef = useRef(null);
   const dimensions = useSize(elementRef);
-  const {onOpen, onClose} = useSidebar();
-
-  useEffect(() => {
-    if (!dimensions) return;
-    if (dimensions.width > 992) onOpen();
-    else onClose();
-    return () => onClose();
-  }, [dimensions, onOpen, onClose]);
+  const windowSize = dimensions ?? {width: 0, height: 0};
 
   return (
     <Box minH="100vh" ref={elementRef} {...props}>
-      <Navbar />
-      <Sidebar />
-      <Main>{props.children}</Main>
+      <SidebarContext.Provider value={{...sidebarDisclosure, ...windowSize}}>
+        <Navbar />
+        <Sidebar />
+        <Main>{props.children}</Main>
+      </SidebarContext.Provider>
     </Box>
   );
 }
+
+Layout.displayName = 'Layout';

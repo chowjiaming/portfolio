@@ -1,9 +1,9 @@
 import {extendTheme} from '@chakra-ui/react';
-import {colours, config, fonts} from './styles/styles';
-import {layerStyles} from './styles/layerStyles';
-import {textStyles} from './styles/textStyles';
-import {formTheme} from './components/form';
-import {buttonTheme} from './components/button';
+import {colours, fonts} from '@/theme/styles/styles';
+import {layerStyles} from '@/theme/styles/layerStyles';
+import {textStyles} from '@/theme/styles/textStyles';
+import {formTheme} from '@/theme/components/form';
+import {buttonTheme} from '@/theme/components/button';
 
 export const theme = extendTheme({
   colors: colours,
@@ -14,5 +14,4 @@ export const theme = extendTheme({
     Button: buttonTheme,
     Form: formTheme,
   },
-  config,
 });

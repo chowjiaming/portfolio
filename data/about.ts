@@ -1,4 +1,4 @@
-import {ExperienceCardProps} from '@/components/Shared/ExperienceCard';
+import {type ExperienceCardProps} from '@/components/Shared/ExperienceCard';
 
 export const intro = [
   {

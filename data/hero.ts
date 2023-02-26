@@ -1,4 +1,4 @@
-import {SocialIconProps} from '@/components/Hero/SocialIcon';
+import {type SocialIconProps} from '@/components/Hero/SocialIcon';
 import {FaGithub, FaLinkedin, FaTwitter, FaMailBulk} from 'react-icons/fa';
 
 export const content = {

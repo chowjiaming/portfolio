@@ -20,7 +20,7 @@ type Props = {
 };
 
 export const Meta: NextPage<Props> = ({
-  title,
+  title = 'Joseph Chow',
   page,
   icon,
   keywords,
@@ -73,7 +73,6 @@ export const Meta: NextPage<Props> = ({
 };
 
 Meta.defaultProps = {
-  title: 'Joseph Chow',
   page: '',
   keywords:
     'web development, portfolio, developer, programming, next.js, nextjs, next-js, next, react.js, reactjs, react-js, react, javascript, typescript, chakra-ui, chakra ui, chakra',

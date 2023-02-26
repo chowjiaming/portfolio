@@ -1,7 +1,7 @@
-import {Icon, Tooltip, chakra, ColorProps} from '@chakra-ui/react';
+import {Icon, Tooltip, chakra, type ColorProps} from '@chakra-ui/react';
 import {motion} from 'framer-motion';
-import type {Variants} from 'framer-motion';
-import type {IconType} from 'react-icons';
+import {type Variants} from 'framer-motion';
+import {type IconType} from 'react-icons';
 
 const MotionButton = chakra(motion.button);
 
