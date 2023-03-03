@@ -2,7 +2,7 @@ import {type IconType} from 'react-icons';
 import {motion} from 'framer-motion';
 import {Button, Icon} from '@chakra-ui/react';
 import {sidebarSettings} from '@/utils/settings';
-import {useSidebar} from '@/context/SidebarContext';
+import {useNav} from '@/context';
 import {useRouter} from 'next/navigation';
 import {LG_SCREEN_WIDTH} from '@/utils/constants';
 
@@ -18,7 +18,7 @@ export function SidebarNavButton({
   itemRoute,
 }: NavButtonProps): JSX.Element {
   const router = useRouter();
-  const {width, onClose} = useSidebar();
+  const {width, onClose} = useNav();
 
   function handleClick(): void {
     if (width < LG_SCREEN_WIDTH) onClose();

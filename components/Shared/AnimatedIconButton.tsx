@@ -27,8 +27,8 @@ export function AnimatedIconButton({
         initial="initial"
         animate="animate"
         exit="exit"
-        display={'flex'}
-        alignItems={'center'}
+        display="flex"
+        alignItems="center"
       >
         <Icon
           as={icon}

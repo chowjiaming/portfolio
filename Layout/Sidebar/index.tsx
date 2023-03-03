@@ -6,14 +6,14 @@ import {
   SIDEBAR_WIDTH,
   SIDEBAR_WIDTH_MOBILE,
 } from '@/utils/constants';
-import {useSidebar} from '@/context/SidebarContext';
+import {useNav} from '@/context';
 import {SidebarHeader} from '@/components/Sidebar/SidebarHeader';
 import {SidebarBody} from '@/components/Sidebar/SidebarBody';
 import {SidebarFooter} from '@/components/Sidebar/SidebarFooter';
 
 export function Sidebar(): JSX.Element {
   const ref = useRef(null);
-  const {width, isOpen, onOpen, onClose} = useSidebar();
+  const {width, isOpen, onOpen, onClose} = useNav();
   const sidebarWidth =
     width > LG_SCREEN_WIDTH ? SIDEBAR_WIDTH * 4 : SIDEBAR_WIDTH_MOBILE * 4;
 

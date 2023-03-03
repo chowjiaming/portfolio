@@ -18,16 +18,16 @@ export function ColorModeToggle(): JSX.Element {
         {isDarkMode ? (
           <AnimatedIconButton
             icon={FaSun}
-            label={'Light mode'}
-            colour={'yellow.400'}
+            label="Light mode"
+            colour="yellow.400"
             variants={enterExitSpin}
             onClick={toggleColorMode}
           />
         ) : (
           <AnimatedIconButton
             icon={FaMoon}
-            label={'Dark mode'}
-            colour={'gray.400'}
+            label="Dark mode"
+            colour="gray.400"
             variants={enterExitSpin}
             onClick={toggleColorMode}
           />

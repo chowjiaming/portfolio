@@ -3,12 +3,12 @@ import {motion} from 'framer-motion';
 import {LG_SCREEN_WIDTH, SECTION_PADDING} from '@/utils/constants';
 import {sidebarSettings} from '@/utils/settings';
 import {ColorModeToggle} from '@/components/Shared/ColorModeToggle';
-import {useSidebar} from '@/context/SidebarContext';
+import {useNav} from '@/context';
 import {useRouter} from 'next/navigation';
 
 export function SidebarHeader(): JSX.Element {
   const router = useRouter();
-  const {width} = useSidebar();
+  const {width} = useNav();
   return (
     <Flex
       as={motion.div}
