@@ -1,7 +1,7 @@
 import {Flex, useColorMode} from '@chakra-ui/react';
 import {FaSun, FaMoon} from 'react-icons/fa';
 import {AnimatePresence, motion} from 'framer-motion';
-import {enterExitSpin, sidebarSettings} from '@/utils/settings';
+import {enterExitSpin, sidebarMotion} from '@/utils/motion';
 import {AnimatedIconButton} from '@/components/Shared/AnimatedIconButton';
 
 export function ColorModeToggle(): JSX.Element {
@@ -9,11 +9,7 @@ export function ColorModeToggle(): JSX.Element {
   const isDarkMode = colorMode === 'dark';
 
   return (
-    <Flex
-      as={motion.div}
-      variants={sidebarSettings.itemVariants}
-      align="center"
-    >
+    <Flex as={motion.div} variants={sidebarMotion.itemVariants} align="center">
       <AnimatePresence>
         {isDarkMode ? (
           <AnimatedIconButton

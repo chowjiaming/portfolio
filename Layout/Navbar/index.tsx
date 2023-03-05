@@ -5,7 +5,7 @@ import {
   SECTION_PADDING,
   STANDARD_MARGIN,
 } from '@/utils/constants';
-import {sidebarSettings} from '@/utils/settings';
+import {sidebarMotion} from '@/utils/motion';
 import {NavbarButtons} from '@/components/Navbar/NavbarButtons';
 import {useRouter} from 'next/navigation';
 
@@ -28,7 +28,7 @@ export function Navbar(): JSX.Element {
     >
       <Heading
         as={motion.h1}
-        variants={sidebarSettings.itemVariants}
+        variants={sidebarMotion.itemVariants}
         cursor="pointer"
         onClick={() => router.push('/')}
       >

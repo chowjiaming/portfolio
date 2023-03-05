@@ -1,7 +1,7 @@
 import {Flex, VStack} from '@chakra-ui/react';
 import {motion} from 'framer-motion';
 import {nav} from '@/data/sidebar';
-import {sidebarSettings} from '@/utils/settings';
+import {sidebarMotion} from '@/utils/motion';
 import {SidebarNavButton} from '@/components/Sidebar/SidebarNavButton';
 import {LARGE_MARGIN, SECTION_PADDING} from '@/utils/constants';
 
@@ -12,7 +12,7 @@ export function SidebarBody(): JSX.Element {
       initial="closed"
       animate="open"
       exit="closed"
-      variants={sidebarSettings.sideVariants}
+      variants={sidebarMotion.sideVariants}
       flex="8"
       h="full"
       w="full"

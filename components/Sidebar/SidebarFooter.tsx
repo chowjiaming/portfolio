@@ -2,7 +2,7 @@ import {Avatar, Flex, Heading, Text} from '@chakra-ui/react';
 import {motion} from 'framer-motion';
 import {footer} from '@/data/sidebar';
 import {STANDARD_MARGIN} from '@/utils/constants';
-import {sidebarSettings} from '@/utils/settings';
+import {sidebarMotion} from '@/utils/motion';
 
 export function SidebarFooter(): JSX.Element {
   return (
@@ -11,7 +11,7 @@ export function SidebarFooter(): JSX.Element {
       initial="closed"
       animate="open"
       exit="closed"
-      variants={sidebarSettings.sideVariants}
+      variants={sidebarMotion.sideVariants}
       flex="2"
       h="full"
       w="full"
@@ -30,7 +30,7 @@ export function SidebarFooter(): JSX.Element {
       >
         <Avatar
           as={motion.span}
-          variants={sidebarSettings.itemVariants}
+          variants={sidebarMotion.itemVariants}
           name={footer.name}
           src="/img/avatar.jpg"
           size={{
@@ -51,7 +51,7 @@ export function SidebarFooter(): JSX.Element {
         >
           <Heading
             as={motion.h3}
-            variants={sidebarSettings.itemVariants}
+            variants={sidebarMotion.itemVariants}
             size={{
               base: 'lg',
               lg: 'xl',
@@ -61,7 +61,7 @@ export function SidebarFooter(): JSX.Element {
           </Heading>
           <Text
             as={motion.a}
-            variants={sidebarSettings.itemVariants}
+            variants={sidebarMotion.itemVariants}
             href={footer.emailRef}
           >
             {footer.email}

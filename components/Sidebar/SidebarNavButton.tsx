@@ -1,7 +1,7 @@
 import {type IconType} from 'react-icons';
 import {motion} from 'framer-motion';
 import {Button, Icon} from '@chakra-ui/react';
-import {sidebarSettings} from '@/utils/settings';
+import {sidebarMotion} from '@/utils/motion';
 import {useNav} from '@/context';
 import {useRouter} from 'next/navigation';
 import {LG_SCREEN_WIDTH} from '@/utils/constants';
@@ -31,7 +31,7 @@ export function SidebarNavButton({
       as={motion.button}
       whileHover={{scale: 1.1}}
       whileTap={{scale: 0.9}}
-      variants={sidebarSettings.itemVariants}
+      variants={sidebarMotion.itemVariants}
       variant="sidebar"
       onClick={handleClick}
     >

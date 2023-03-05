@@ -1,7 +1,7 @@
 import {Flex, Heading} from '@chakra-ui/react';
 import {motion} from 'framer-motion';
 import {LG_SCREEN_WIDTH, SECTION_PADDING} from '@/utils/constants';
-import {sidebarSettings} from '@/utils/settings';
+import {sidebarMotion} from '@/utils/motion';
 import {ColorModeToggle} from '@/components/Shared/ColorModeToggle';
 import {useNav} from '@/context';
 import {useRouter} from 'next/navigation';
@@ -15,7 +15,7 @@ export function SidebarHeader(): JSX.Element {
       initial="closed"
       animate="open"
       exit="closed"
-      variants={sidebarSettings.sideVariants}
+      variants={sidebarMotion.sideVariants}
       flex="1"
       h="full"
       w="full"
@@ -25,7 +25,7 @@ export function SidebarHeader(): JSX.Element {
     >
       <Heading
         as={motion.h1}
-        variants={sidebarSettings.itemVariants}
+        variants={sidebarMotion.itemVariants}
         cursor="pointer"
         onClick={() => router.push('/')}
       >
