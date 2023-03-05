@@ -10,31 +10,26 @@ export const nav: NavButtonProps[] = [
     icon: AiOutlineHome,
     itemName: 'Home',
     itemRoute: '/',
-    activeClass: 'active',
   },
   {
     icon: BsFillPersonLinesFill,
     itemName: 'About',
     itemRoute: '/about',
-    activeClass: '',
   },
   {
     icon: SlNotebook,
     itemName: 'Portfolio',
     itemRoute: '/portfolio',
-    activeClass: '',
   },
   {
     icon: FaRegCommentDots,
     itemName: 'Testimonial',
     itemRoute: '/testimonial',
-    activeClass: '',
   },
   {
     icon: MdOutlineContactMail,
     itemName: 'Contact',
     itemRoute: '/contact',
-    activeClass: '',
   },
 ];
 export const footer = {

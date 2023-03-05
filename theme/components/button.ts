@@ -8,19 +8,29 @@ const sidebar = defineStyle({
   justifyContent: 'flex-start',
   gap: STANDARD_MARGIN,
   px: SECTION_PADDING,
-  '&.is-active': {
-    backgroundColor: 'gray.100',
-    backgroundSize: '200% 100%',
-    backgroundPosition: 'left top',
-    color: 'gray.700',
-    fontWeight: 'bold',
-    transition: 'all 0.3s ease-in-out',
+  transition: 'all 0.2s ease-out',
+  _hover: {
+    bg: 'gray.200',
+  },
+  _dark: {
+    _hover: {
+      bg: 'gray.700',
+    },
+  },
+});
+const sidebarActive = defineStyle({
+  ...sidebar,
+  color: 'green.500',
+  bg: 'gray.200',
+  _dark: {
+    color: 'teal.300',
+    bg: 'gray.700',
   },
 });
 
 export const buttonTheme = defineStyleConfig({
   baseStyle,
   sizes: {},
-  variants: {sidebar},
+  variants: {sidebar, sidebarActive},
   defaultProps: {},
 });
